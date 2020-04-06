@@ -42,7 +42,7 @@ W3C勧告文書の日本語翻訳物作成手順の案について以下に示�
 * 作業担当者: 事務局
 * 工程生産物: HTMLに変換された日本語翻訳物 (日本語原本)
 
-例) [Thing Descriptionの日本語原本ドラフト](https://ashimura.github.io/wot-downstream/wot-thing-description/Overview.html)
+例) [Thing Descriptionの日本語原本ドラフト](https://wot-jp-community.github.io/wot-downstream/wot-thing-description/Overview.html)
 
 ### 工程2: 日本語原稿の査読
 
