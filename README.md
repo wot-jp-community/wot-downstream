@@ -35,7 +35,7 @@ W3C勧告文書の日本語翻訳物作成手順の案について以下に示�
    * % tidy -i -m Overview.html
 1. 日本語原本HTML中のタグに含まれる，不要な属性を削除する
    * conv.shで整形する
-1. HTMLファイル中に，&nbsp; に起因する「0xA0」コードが含まれる場合は削除する
+1. HTMLファイル中に，nbsp; に起因する「0xA0」コードが含まれる場合は削除する
 1. <head>タグ，図表等，問題のある部分の内容を修正する
    * 英語原本 (例えば，[Thing Description仕様書](https://www.w3.org/TR/2020/PR-wot-thing-description-20200130/Ovierview.html) にもとづいて手作業で修正する
 
