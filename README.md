@@ -95,6 +95,10 @@ W3C勧告文書の日本語翻訳物作成手順の案について以下に示�
 * 作業担当者: 事務局
 * 工程生産物: 問題点を修正の上，公開向けフォーマットに変換された日本語原稿 (公開原本)
 
+例)
+* [Thing Descriptionの公開原本 (PDF)](https://github.com/wot-jp-community/wot-downstream/blob/master/wot-thing-description/Overview.pdf)
+* [Thing Descriptionの公開原本 (Word)](https://github.com/wot-jp-community/wot-downstream/blob/master/wot-thing-description/Overview.docx)
+
 #### 工程3.2: 最終確認
 
 なお，公開に先立って，「公開原本」の内容について，あらためて「工程2: 日本語原稿の査読」の「査読の観点」に示すような観点での確認を行うべきであると考えられる．この最終確認作業については，「いつ・誰が行うか」を，公開先・査読者全員・事務局の間で意識合わせの上で，最終的な公開内容に問題のないようにする．
