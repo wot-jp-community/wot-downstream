@@ -29,8 +29,10 @@ for my $node ($h->findnodes('//span')){
     $node->replace_with_content for $node->look_down(style => "background: #ffffff");
 }
 # remove extra <span> tags with 'lang' attribute
-for my $node ($h->findnodes('//span')){
-    $node->replace_with_content for $node->look_down(lang => "ja-JP");
+for my $node ($h->findnodes(q{//span[@lang='ja-JP']})){
+    if (!$node->is_empty()) {
+        $node->replace_with_content();
+    }
 }
 # remove extra 'align', 'class' and 'style' attributes from <p> tags
 for my $node ($h->findnodes('//p')){
