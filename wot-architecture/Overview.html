@@ -4,7 +4,7 @@
   <meta name="generator" content=
   "HTML Tidy for HTML5 for Linux version 5.7.27">
   <meta charset="utf-8">
-  <meta name="generator" content="ReSpec 24.34.0">
+  <meta name="generator" content="ReSpec 24.21.7">
   <meta name="viewport" content=
   "width=device-width, initial-scale=1, shrink-to-fit=no">
   <style>
@@ -34,10 +34,12 @@
 
   .warning-title:before{
     content: "⚠"; /*U+26A0 WARNING SIGN*/
-    font-size: 1.3em;
+    font-size: 3em;
     float: left;
+    height: 100%;
     padding-right: .3em;
-    margin-top: -0.3em;
+    vertical-align: top;
+    margin-top: -0.5em;
   }
 
   li.task-list-item {
@@ -132,18 +134,24 @@
   animation: pop 0.25s ease-in-out 0s 1;
   }
 
-  .respec-offending-element,
-  a[href].respec-offending-element {
-  text-decoration: red wavy underline;
+  /* TODO: Remove once https://github.com/w3c/tr-design/pull/176 is merged. */
+  .respec-offending-element a[href] {
+  margin: 0;
   }
-  @supports not (text-decoration: red wavy underline) {
-  .respec-offending-element:not(pre) {
-    display: inline-block;
-  }
+
   .respec-offending-element {
-    /* Red squiggly line */
-    background: url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=)
-      bottom repeat-x;
+  display: inline-block;
+  position: relative;
+  /* Red squiggly line */
+  background: url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=)
+    bottom repeat-x;
+  }
+  @supports (text-decoration-style: wavy) {
+  .respec-offending-element {
+    background: none;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: red;
   }
   }
 
@@ -205,12 +213,6 @@
 
   .simple th {
   background: #005a9c;
-  color: #fff;
-  padding: 3px 5px;
-  text-align: left;
-  }
-
-  .simple th a {
   color: #fff;
   padding: 3px 5px;
   text-align: left;
@@ -380,6 +382,7 @@
   var {
   position: relative;
   cursor: pointer;
+  display: inline-block;
   }
 
   var[data-type]::before,
@@ -414,8 +417,6 @@
   padding: 6px;
   border-radius: 3px;
   color: #daca88;
-  text-indent: 0;
-  font-weight: normal;
   }
 
   var[data-type]:hover::after,
@@ -443,8 +444,6 @@
     "repoURL": "https://github.com/w3c/wot-architecture",
     "branch": "master"
   },
-  "previousPublishDate": "2019-05-16",
-  "previousMaturity": "CR",
   "editors": [
     {
       "name": "Matthias Kovatsch",
@@ -515,18 +514,18 @@
   ],
   "localBiblio": {
     "CoRE-RD": {
-      "href": "https://tools.ietf.org/html/draft-ietf-core-resource-directory-21",
+      "href": "https://tools.ietf.org/html/draft-ietf-core-resource-directory-20",
       "title": "CoRE Resource Directory",
-      "authors": [
-        "M. Koster",
-        "C. Bormann",
-        "P. van der Stok",
-        "C. Amsuess"
-      ],
       "status": "Internet-Draft",
       "publisher": "IETF",
-      "date": "13 June 2019",
+      "date": "11 March 2019",
       "id": "core-rd"
+    },
+    "tag-review-wot-thing-description": {
+      "href": "https://cdn.staticaly.com/gh/w3c/wot-thing-description/TD-TAG-review/index.html?env=dev",
+      "title": "Web of Things (WoT) Thing Description",
+      "status": "Editor's Draft for TAG Review",
+      "publisher": "W3C"
     },
     "IEC-FOTF": {
       "href": "https://www.iec.ch/whitepaper/pdf/iecWP-futurefactory-LR-en.pdf",
@@ -535,17 +534,14 @@
       "date": "October 2015",
       "id": "iec-fotf"
     },
-    "IOT-SCHEMA-ORG": {
-      "href": "https://www.w3.org/community/iotschema/",
-      "title": "Schema Extensions for IoT Community Group",
+    "iot-schema-org": {
+      "href": "https://iot.schema.org/",
+      "title": "iot.schema.org",
       "id": "iot-schema-org"
     },
     "REST": {
-      "href": "https://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf",
       "title": "REST: Architectural Styles and the Design of Network-based Software Architectures",
-      "authors": [
-        "Roy Thomas Fielding"
-      ],
+      "author": "Roy Thomas Fielding",
       "status": "PhD thesis",
       "publisher": "University of California, Irvine",
       "date": "2000",
@@ -559,30 +555,24 @@
       "id": "saref"
     },
     "HCI": {
-      "href": "https://www.interaction-design.org/literature/book/the-encyclopedia-of-human-computer-interaction-2nd-ed",
       "title": "The Encyclopedia of Human-Computer Interaction, 2nd Ed",
+      "author": "Mads Soegaard, Rikke Friis Dam",
       "publisher": "Interaction Design Foundation",
       "date": "2013",
       "id": "hci"
     },
     "NORMAN": {
       "title": "The Psychology of Everyday Things",
-      "authors": [
-        "Donald A. Norman"
-      ],
+      "author": "Donald A. Norman",
       "publisher": "Basic Books",
       "date": "1988",
       "id": "norman"
     },
     "MQTT": {
-      "href": "http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/mqtt-v3.1.1.html",
-      "title": "MQTT Version 3.1.1 Plus Errata 01",
-      "authors": [
-        "Andrew Banks",
-        "Rahul Gupta"
-      ],
+      "title": "MQTT Version 3.1.1",
+      "author": "Andrew Banks, Rahul Gupta",
       "publisher": "OASIS Standard",
-      "date": "December 2015",
+      "date": "2014",
       "id": "mqtt"
     },
     "OCF": {
@@ -612,8 +602,7 @@
       "date": " March 2019",
       "id": "coral"
     },
-    "WOT-PIONEERS-1": {
-      "href": "https://pdfs.semanticscholar.org/3ee3/a2e8ce93fbf9ba14ad54e12adaeb1f3ca392.pdf",
+    "wot-pioneers-1": {
       "title": "Mobile Service Interaction with the Web of Things",
       "authors": [
         "E. Rukzio, M. Paolucci",
@@ -625,8 +614,7 @@
       "date": "May 2006",
       "id": "wot-pioneers-1"
     },
-    "WOT-PIONEERS-2": {
-      "href": "http://dret.net/netdret/docs/wilde-irep07-015-restful-things.pdf",
+    "wot-pioneers-2": {
       "title": "Putting Things to REST",
       "authors": [
         "Erik Wilde"
@@ -635,8 +623,7 @@
       "date": "November 2007",
       "id": "wot-pioneers-2"
     },
-    "WOT-PIONEERS-3": {
-      "href": "https://www.vs.inf.ethz.ch/publ/papers/ostermai-poster-2008.pdf",
+    "wot-pioneers-3": {
       "title": "Poster Abstract: Dyser – Towards a Real-Time Search Engine for the Web of Things",
       "authors": [
         "Benedikt Ostermaier",
@@ -649,8 +636,7 @@
       "date": "November 2008",
       "id": "wot-pioneers-3"
     },
-    "WOT-PIONEERS-4": {
-      "href": "https://ieeexplore.ieee.org/abstract/document/5678452",
+    "wot-pioneers-4": {
       "title": "A Resource Oriented Architecture for the Web of Things",
       "authors": [
         "Dominique Guinard",
@@ -662,41 +648,19 @@
       "id": "wot-pioneers-4"
     },
     "Y.4409-Y.2070": {
-      "href": "https://www.itu.int/rec/T-REC-Y.2070-201501-I",
       "title": "ITU-T Rec. Y.4409/Y.2070 (01/2015) Requirements and architecture of the home energy management system and home network services ",
       "publisher": "ITU-T",
       "status": "Recommendation",
       "date": "January 2015",
       "id": "y.4409-y.2070"
-    },
-    "ISO-IEC-2382": {
-      "href": "https://www.iso.org/obp/ui/#iso:std:iso-iec:2382:ed-1:v1:en",
-      "title": "Information technology — Vocabulary",
-      "publisher": "ISO",
-      "date": "2015",
-      "id": "iso-iec-2382"
-    },
-    "ISO-IEC-27000": {
-      "href": "https://www.iso.org/obp/ui/#iso:std:iso-iec:27000:ed-5:v1:en",
-      "title": "Information technology — Security techniques — Information security management systems — Overview and vocabulary",
-      "publisher": "ISO",
-      "date": "2018",
-      "id": "iso-iec-27000"
-    },
-    "ISO-IEC-29100": {
-      "href": "https://www.iso.org/obp/ui/#iso:std:iso-iec:29100:ed-1:v1:en",
-      "title": "Information technology — Security techniques — Privacy framework",
-      "publisher": "ISO",
-      "date": "2011",
-      "id": "iso-iec-29100"
     }
   },
-  "publishISODate": "2019-11-06T00:00:00.000Z",
-  "generatedSubtitle": "Candidate Recommendation 6 November 2019"
+  "publishISODate": "2019-05-09T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 09 May 2019"
   }
   </script>
   <meta name="description" content=
-  "The W3C Web of Things (WoT) is intended to enable interoperability across IoT platforms and application domains. Overall, the goal of the WoT is to preserve and complement existing IoT standards and solutions. In general, the W3C WoT architecture is designed to describe what exists rather than to prescribe what to implement.">
+  "The W3C Web of Things (WoT) was created to enable interoperability across IoT platforms and application domains.">
 
   <script type="application/ld+json">
   {
@@ -728,15 +692,15 @@
   "name": "Web of Things (WoT) Architecture",
   "inLanguage": "en-US",
   "license": "https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document",
-  "datePublished": "2019-11-06",
+  "datePublished": "2019-05-09",
   "copyrightHolder": {
     "name": "World Wide Web Consortium",
     "url": "https://www.w3.org/"
   },
   "discussionUrl": "https://github.com/w3c/wot-architecture/issues/",
   "alternativeHeadline": "",
-  "isBasedOn": "https://www.w3.org/TR/2019/CR-wot-architecture-20190516/",
-  "description": "The W3C Web of Things (WoT) is intended to enable\n            interoperability across IoT platforms and application\n            domains.\n            Overall, the goal of the WoT is to preserve and complement existing\n            IoT standards and solutions. In general, the W3C WoT architecture is \n            designed to describe what exists rather than to prescribe\n            what to implement.",
+  "isBasedOn": "",
+  "description": "The W3C Web of Things (WoT) was created to enable\n            interoperability across IoT platforms and application\n            domains.",
   "editor": [
     {
       "type": "Person",
@@ -785,16 +749,28 @@
   ],
   "citation": [
     {
+      "id": "https://www.w3.org/TR/wot-thing-description/",
+      "type": "TechArticle",
+      "name": "Web of Things (WoT) Thing Description",
+      "url": "https://www.w3.org/TR/wot-thing-description/"
+    },
+    {
+      "id": "https://tools.ietf.org/html/rfc8288",
+      "type": "TechArticle",
+      "name": "Web Linking",
+      "url": "https://tools.ietf.org/html/rfc8288"
+    },
+    {
       "id": "https://tools.ietf.org/html/rfc8259",
       "type": "TechArticle",
       "name": "The JavaScript Object Notation (JSON) Data Interchange Format",
       "url": "https://tools.ietf.org/html/rfc8259"
     },
     {
-      "id": "https://httpwg.org/specs/rfc8288.html",
+      "id": "https://www.iana.org/assignments/link-relations/",
       "type": "TechArticle",
-      "name": "Web Linking",
-      "url": "https://httpwg.org/specs/rfc8288.html"
+      "name": "Link Relations",
+      "url": "https://www.iana.org/assignments/link-relations/"
     },
     {
       "id": "https://tools.ietf.org/html/rfc5234",
@@ -815,10 +791,38 @@
       "url": "https://tools.ietf.org/html/rfc3987"
     },
     {
-      "id": "https://tools.ietf.org/html/rfc2046",
+      "id": "https://tools.ietf.org/html/rfc7231",
       "type": "TechArticle",
-      "name": "Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types",
-      "url": "https://tools.ietf.org/html/rfc2046"
+      "name": "Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content",
+      "url": "https://tools.ietf.org/html/rfc7231"
+    },
+    {
+      "id": "https://tools.ietf.org/html/rfc7252",
+      "type": "TechArticle",
+      "name": "The Constrained Application Protocol (CoAP)",
+      "url": "https://tools.ietf.org/html/rfc7252"
+    },
+    {
+      "type": "TechArticle",
+      "name": "MQTT Version 3.1.1"
+    },
+    {
+      "id": "https://tools.ietf.org/html/rfc4395",
+      "type": "TechArticle",
+      "name": "Guidelines and Registration Procedures for New URI Schemes",
+      "url": "https://tools.ietf.org/html/rfc4395"
+    },
+    {
+      "id": "https://tools.ietf.org/html/rfc6838",
+      "type": "TechArticle",
+      "name": "Media Type Specifications and Registration Procedures",
+      "url": "https://tools.ietf.org/html/rfc6838"
+    },
+    {
+      "id": "https://tools.ietf.org/html/rfc7049",
+      "type": "TechArticle",
+      "name": "Concise Binary Object Representation (CBOR)",
+      "url": "https://tools.ietf.org/html/rfc7049"
     },
     {
       "id": "https://tools.ietf.org/html/rfc2119",
@@ -831,12 +835,6 @@
       "type": "TechArticle",
       "name": "Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words",
       "url": "https://tools.ietf.org/html/rfc8174"
-    },
-    {
-      "id": "https://www.w3.org/TR/wot-thing-description/",
-      "type": "TechArticle",
-      "name": "Web of Things (WoT) Thing Description",
-      "url": "https://www.w3.org/TR/wot-thing-description/"
     },
     {
       "id": "https://www.w3.org/TR/wot-binding-templates/",
@@ -857,28 +855,10 @@
       "url": "https://www.w3.org/TR/wot-security/"
     },
     {
-      "id": "https://www.iso.org/obp/ui/#iso:std:iso-iec:29100:ed-1:v1:en",
-      "type": "TechArticle",
-      "name": "Information technology — Security techniques — Privacy framework",
-      "url": "https://www.iso.org/obp/ui/#iso:std:iso-iec:29100:ed-1:v1:en"
-    },
-    {
-      "id": "https://www.iso.org/obp/ui/#iso:std:iso-iec:2382:ed-1:v1:en",
-      "type": "TechArticle",
-      "name": "Information technology — Vocabulary",
-      "url": "https://www.iso.org/obp/ui/#iso:std:iso-iec:2382:ed-1:v1:en"
-    },
-    {
-      "id": "https://www.iso.org/obp/ui/#iso:std:iso-iec:27000:ed-5:v1:en",
-      "type": "TechArticle",
-      "name": "Information technology — Security techniques — Information security management systems — Overview and vocabulary",
-      "url": "https://www.iso.org/obp/ui/#iso:std:iso-iec:27000:ed-5:v1:en"
-    },
-    {
-      "id": "https://tools.ietf.org/html/draft-ietf-core-resource-directory-21",
+      "id": "https://tools.ietf.org/html/draft-ietf-core-resource-directory-20",
       "type": "TechArticle",
       "name": "CoRE Resource Directory",
-      "url": "https://tools.ietf.org/html/draft-ietf-core-resource-directory-21"
+      "url": "https://tools.ietf.org/html/draft-ietf-core-resource-directory-20"
     },
     {
       "id": "https://www.iec.ch/whitepaper/pdf/iecWP-futurefactory-LR-en.pdf",
@@ -887,22 +867,18 @@
       "url": "https://www.iec.ch/whitepaper/pdf/iecWP-futurefactory-LR-en.pdf"
     },
     {
-      "id": "https://www.w3.org/TR/json-ld11/",
+      "id": "https://www.w3.org/TR/json-ld/",
       "type": "TechArticle",
-      "name": "JSON-LD 1.1",
-      "url": "https://www.w3.org/TR/json-ld11/"
+      "name": "JSON-LD 1.0",
+      "url": "https://www.w3.org/TR/json-ld/"
     },
     {
-      "id": "https://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf",
       "type": "TechArticle",
-      "name": "REST: Architectural Styles and the Design of Network-based Software Architectures",
-      "url": "https://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf"
+      "name": "REST: Architectural Styles and the Design of Network-based Software Architectures"
     },
     {
-      "id": "https://www.interaction-design.org/literature/book/the-encyclopedia-of-human-computer-interaction-2nd-ed",
       "type": "TechArticle",
-      "name": "The Encyclopedia of Human-Computer Interaction, 2nd Ed",
-      "url": "https://www.interaction-design.org/literature/book/the-encyclopedia-of-human-computer-interaction-2nd-ed"
+      "name": "The Encyclopedia of Human-Computer Interaction, 2nd Ed"
     },
     {
       "type": "TechArticle",
@@ -939,46 +915,16 @@
       "url": "https://tools.ietf.org/html/draft-hartke-t2trg-coral"
     },
     {
-      "id": "https://www.iana.org/assignments/link-relations/",
-      "type": "TechArticle",
-      "name": "Link Relations",
-      "url": "https://www.iana.org/assignments/link-relations/"
-    },
-    {
-      "id": "https://httpwg.org/specs/rfc7231.html",
-      "type": "TechArticle",
-      "name": "Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content",
-      "url": "https://httpwg.org/specs/rfc7231.html"
-    },
-    {
-      "id": "https://tools.ietf.org/html/rfc7252",
-      "type": "TechArticle",
-      "name": "The Constrained Application Protocol (CoAP)",
-      "url": "https://tools.ietf.org/html/rfc7252"
-    },
-    {
-      "id": "http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/mqtt-v3.1.1.html",
-      "type": "TechArticle",
-      "name": "MQTT Version 3.1.1 Plus Errata 01",
-      "url": "http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/mqtt-v3.1.1.html"
-    },
-    {
-      "id": "https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml",
-      "type": "TechArticle",
-      "name": "Uniform Resource Identifier (URI) Schemes",
-      "url": "https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml"
-    },
-    {
-      "id": "https://tools.ietf.org/html/rfc7049",
-      "type": "TechArticle",
-      "name": "Concise Binary Object Representation (CBOR)",
-      "url": "https://tools.ietf.org/html/rfc7049"
-    },
-    {
       "id": "https://www.w3.org/DesignIssues/LinkedData.html",
       "type": "TechArticle",
       "name": "Linked Data Design Issues",
       "url": "https://www.w3.org/DesignIssues/LinkedData.html"
+    },
+    {
+      "id": "https://www.w3.org/TR/json-ld11/",
+      "type": "TechArticle",
+      "name": "JSON-LD 1.1",
+      "url": "https://www.w3.org/TR/json-ld11/"
     },
     {
       "id": "https://sites.google.com/site/smartappliancesproject/ontologies/reference-ontology",
@@ -987,10 +933,10 @@
       "url": "https://sites.google.com/site/smartappliancesproject/ontologies/reference-ontology"
     },
     {
-      "id": "https://www.w3.org/community/iotschema/",
+      "id": "https://iot.schema.org/",
       "type": "TechArticle",
-      "name": "Schema Extensions for IoT Community Group",
-      "url": "https://www.w3.org/community/iotschema/"
+      "name": "iot.schema.org",
+      "url": "https://iot.schema.org/"
     },
     {
       "id": "https://www.w3.org/TR/vocab-ssn/",
@@ -1047,34 +993,24 @@
       "url": "https://tc39.github.io/ecma262/"
     },
     {
-      "id": "https://www.itu.int/rec/T-REC-Y.2070-201501-I",
       "type": "TechArticle",
-      "name": "ITU-T Rec. Y.4409/Y.2070 (01/2015) Requirements and architecture of the home energy management system and home network services ",
-      "url": "https://www.itu.int/rec/T-REC-Y.2070-201501-I"
+      "name": "ITU-T Rec. Y.4409/Y.2070 (01/2015) Requirements and architecture of the home energy management system and home network services "
     },
     {
-      "id": "https://pdfs.semanticscholar.org/3ee3/a2e8ce93fbf9ba14ad54e12adaeb1f3ca392.pdf",
       "type": "TechArticle",
-      "name": "Mobile Service Interaction with the Web of Things",
-      "url": "https://pdfs.semanticscholar.org/3ee3/a2e8ce93fbf9ba14ad54e12adaeb1f3ca392.pdf"
+      "name": "Mobile Service Interaction with the Web of Things"
     },
     {
-      "id": "http://dret.net/netdret/docs/wilde-irep07-015-restful-things.pdf",
       "type": "TechArticle",
-      "name": "Putting Things to REST",
-      "url": "http://dret.net/netdret/docs/wilde-irep07-015-restful-things.pdf"
+      "name": "Putting Things to REST"
     },
     {
-      "id": "https://www.vs.inf.ethz.ch/publ/papers/ostermai-poster-2008.pdf",
       "type": "TechArticle",
-      "name": "Poster Abstract: Dyser – Towards a Real-Time Search Engine for the Web of Things",
-      "url": "https://www.vs.inf.ethz.ch/publ/papers/ostermai-poster-2008.pdf"
+      "name": "Poster Abstract: Dyser – Towards a Real-Time Search Engine for the Web of Things"
     },
     {
-      "id": "https://ieeexplore.ieee.org/abstract/document/5678452",
       "type": "TechArticle",
-      "name": "A Resource Oriented Architecture for the Web of Things",
-      "url": "https://ieeexplore.ieee.org/abstract/document/5678452"
+      "name": "A Resource Oriented Architecture for the Web of Things"
     }
   ]
   }
@@ -1083,21 +1019,24 @@
   "https://www.w3.org/StyleSheets/TR/2016/W3C-CR">
 </head>
 <body class="h-entry toc-inline">
-    <p>【注意】 この文書は、<a href="http://www.w3.org/TR/2019/CR-wot-architecture-0191106/">2019年11月6日付の W3C勧告候補「Web of Things (WoT) Architecture」(原文は英語)</a>を、WoT JP Commuityが翻訳と修正をおこなって公開しているものです。この文書の正式版は、あくまでW3Cのサイト内にある英語版であり、この文書には翻訳上の間違い、あるいは不適切な表現が含まれている可能性がありますのでご注意ください。</p>
-    <hr/>
+  <p>【注意】 この文書は、<a href=
+  "http://www.w3.org/TR/2019/CR-wot-architecture-20190516">2019年5月16日付の
+  W3C勧告候補「Web of Things (WoT) Architecture」(原文は英語)</a>を、WoT JP
+  Commuityが翻訳と修正をおこなって公開しているものです。この文書の正式版は、あくまでW3Cのサイト内にある英語版であり、この文書には翻訳上の間違い、あるいは不適切な表現が含まれている可能性がありますのでご注意ください。</p>
+  <hr>
   <div class="head">
-    <a class="logo" href="https://www.w3.org/"><img alt="W3C"
-    width="72" height="48" src=
-    "https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a>
+    <a class="logo" href="https://www.w3.org/"><img alt="W3C" src=
+    "https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width="72"
+    height="48"></a>
     <h1 id="title" class="title p-name">Web of Things (WoT)
     Architecture</h1>
     <h2>W3C Candidate Recommendation <time class="dt-published"
-    datetime="2019-11-06">6 November 2019</time></h2>
+    datetime="2019-05-16">16 May 2019</time></h2>
     <dl>
       <dt>This version:</dt>
       <dd>
         <a class="u-url" href=
-        "https://www.w3.org/TR/2019/CR-wot-architecture-20191106/">https://www.w3.org/TR/2019/CR-wot-architecture-20191106/</a>
+        "https://www.w3.org/TR/2019/CR-wot-architecture-20190516/">https://www.w3.org/TR/2019/CR-wot-architecture-20190516/</a>
       </dd>
       <dt>Latest published version:</dt>
       <dd>
@@ -1118,7 +1057,7 @@
       <dt>Previous version:</dt>
       <dd>
         <a href=
-        "https://www.w3.org/TR/2019/CR-wot-architecture-20190516/">https://www.w3.org/TR/2019/CR-wot-architecture-20190516/</a>
+        "https://www.w3.org/TR/2017/WD-wot-architecture-20170914/">https://www.w3.org/TR/2017/WD-wot-architecture-20170914/</a>
       </dd>
       <dt>Editors:</dt>
       <dd class="p-author h-card vcard" data-editor-id="75998">
@@ -5432,23 +5371,24 @@
   "http://www.w3.org/TR/2019/CR-wot-architecture-20190516/#bib-wot-pioneers-4">wot-pioneers-4</a>]などの出版物として、また、2010年に開始された年次のWoTに関する国際ワークショップを学術的なイニシアチブとしてスタートした「Web
   of Things」のコンセプトに関する先駆者的な取り組みに感謝いたします。</p>
   <section id="references" class="appendix">
-    <h2 id="c-references"><bdi class="secno">C.</bdi>
+    <h2 id="c-references"></h2><bdi class="secno">C.</bdi>
     References<a class="self-link" aria-label="§" href=
-    "#references"></a></h2>
+    "#references"></a>
     <section id="normative-references">
-      <h3 id="c-1-normative-references"><bdi class=
+      <h3 id="c-1-normative-references"></h3><bdi class=
       "secno">C.1</bdi> Normative references<a class="self-link"
-      aria-label="§" href="#normative-references"></a></h3>
+      aria-label="§" href="#normative-references"></a>
       <dl class="bibliography">
-        <dt id="bib-rfc2046">[RFC2046]</dt>
+        <dt id="bib-iana-relations">[IANA-RELATIONS]</dt>
         <dd>
           <a href=
-          "https://tools.ietf.org/html/rfc2046"><cite>Multipurpose
-          Internet Mail Extensions (MIME) Part Two: Media
-          Types</cite></a>. N. Freed; N. Borenstein. IETF. November
-          1996. Draft Standard. URL: <a href=
-          "https://tools.ietf.org/html/rfc2046">https://tools.ietf.org/html/rfc2046</a>
+          "https://www.iana.org/assignments/link-relations/"><cite>Link
+          Relations</cite></a>. IANA. URL: <a href=
+          "https://www.iana.org/assignments/link-relations/">https://www.iana.org/assignments/link-relations/</a>
         </dd>
+        <dt id="bib-mqtt">[MQTT]</dt>
+        <dd><cite>MQTT Version 3.1.1</cite>. OASIS Standard.
+        2014.</dd>
         <dt id="bib-rfc2119">[RFC2119]</dt>
         <dd>
           <a href="https://tools.ietf.org/html/rfc2119"><cite>Key
@@ -5475,6 +5415,15 @@
           <a href=
           "https://tools.ietf.org/html/rfc3987">https://tools.ietf.org/html/rfc3987</a>
         </dd>
+        <dt id="bib-rfc4395">[RFC4395]</dt>
+        <dd>
+          <a href=
+          "https://tools.ietf.org/html/rfc4395"><cite>Guidelines
+          and Registration Procedures for New URI
+          Schemes</cite></a>. T. Hansen; T. Hardie; L. Masinter.
+          IETF. February 2006. Best Current Practice. URL: <a href=
+          "https://tools.ietf.org/html/rfc4395">https://tools.ietf.org/html/rfc4395</a>
+        </dd>
         <dt id="bib-rfc5234">[RFC5234]</dt>
         <dd>
           <a href=
@@ -5483,6 +5432,40 @@
           Ed.; P. Overell. IETF. January 2008. Internet Standard.
           URL: <a href=
           "https://tools.ietf.org/html/rfc5234">https://tools.ietf.org/html/rfc5234</a>
+        </dd>
+        <dt id="bib-rfc6838">[RFC6838]</dt>
+        <dd>
+          <a href="https://tools.ietf.org/html/rfc6838"><cite>Media
+          Type Specifications and Registration
+          Procedures</cite></a>. N. Freed; J. Klensin; T. Hansen.
+          IETF. January 2013. Best Current Practice. URL: <a href=
+          "https://tools.ietf.org/html/rfc6838">https://tools.ietf.org/html/rfc6838</a>
+        </dd>
+        <dt id="bib-rfc7049">[RFC7049]</dt>
+        <dd>
+          <a href=
+          "https://tools.ietf.org/html/rfc7049"><cite>Concise
+          Binary Object Representation (CBOR)</cite></a>. C.
+          Bormann; P. Hoffman. IETF. October 2013. Proposed
+          Standard. URL: <a href=
+          "https://tools.ietf.org/html/rfc7049">https://tools.ietf.org/html/rfc7049</a>
+        </dd>
+        <dt id="bib-rfc7231">[RFC7231]</dt>
+        <dd>
+          <a href=
+          "https://tools.ietf.org/html/rfc7231"><cite>Hypertext
+          Transfer Protocol (HTTP/1.1): Semantics and
+          Content</cite></a>. R. Fielding, Ed.; J. Reschke, Ed..
+          IETF. June 2014. Proposed Standard. URL: <a href=
+          "https://tools.ietf.org/html/rfc7231">https://tools.ietf.org/html/rfc7231</a>
+        </dd>
+        <dt id="bib-rfc7252">[RFC7252]</dt>
+        <dd>
+          <a href="https://tools.ietf.org/html/rfc7252"><cite>The
+          Constrained Application Protocol (CoAP)</cite></a>. Z.
+          Shelby; K. Hartke; C. Bormann. IETF. June 2014. Proposed
+          Standard. URL: <a href=
+          "https://tools.ietf.org/html/rfc7252">https://tools.ietf.org/html/rfc7252</a>
         </dd>
         <dt id="bib-rfc8174">[RFC8174]</dt>
         <dd>
@@ -5503,17 +5486,27 @@
         </dd>
         <dt id="bib-rfc8288">[RFC8288]</dt>
         <dd>
-          <a href="https://httpwg.org/specs/rfc8288.html"><cite>Web
+          <a href="https://tools.ietf.org/html/rfc8288"><cite>Web
           Linking</cite></a>. M. Nottingham. IETF. October 2017.
           Proposed Standard. URL: <a href=
-          "https://httpwg.org/specs/rfc8288.html">https://httpwg.org/specs/rfc8288.html</a>
+          "https://tools.ietf.org/html/rfc8288">https://tools.ietf.org/html/rfc8288</a>
+        </dd>
+        <dt id="bib-wot-thing-description">
+        [wot-thing-description]</dt>
+        <dd>
+          <a href=
+          "https://www.w3.org/TR/wot-thing-description/"><cite>Web
+          of Things (WoT) Thing Description</cite></a>. Sebastian
+          Käbisch; Takuki Kamiya. W3C. 21 October 2018. W3C Working
+          Draft. URL: <a href=
+          "https://www.w3.org/TR/wot-thing-description/">https://www.w3.org/TR/wot-thing-description/</a>
         </dd>
       </dl>
     </section>
     <section id="informative-references">
-      <h3 id="c-2-informative-references"><bdi class=
+      <h3 id="c-2-informative-references"></h3><bdi class=
       "secno">C.2</bdi> Informative references<a class="self-link"
-      aria-label="§" href="#informative-references"></a></h3>
+      aria-label="§" href="#informative-references"></a>
       <dl class="bibliography">
         <dt id="bib-coral">[CoRAL]</dt>
         <dd>
@@ -5527,12 +5520,11 @@
         <dt id="bib-core-rd">[CoRE-RD]</dt>
         <dd>
           <a href=
-          "https://tools.ietf.org/html/draft-ietf-core-resource-directory-21">
-          <cite>CoRE Resource Directory</cite></a>. M. Koster; C.
-          Bormann; P. van der Stok; C. Amsuess. IETF. 13 June 2019.
-          Internet-Draft. URL: <a href=
-          "https://tools.ietf.org/html/draft-ietf-core-resource-directory-21">
-          https://tools.ietf.org/html/draft-ietf-core-resource-directory-21</a>
+          "https://tools.ietf.org/html/draft-ietf-core-resource-directory-20">
+          <cite>CoRE Resource Directory</cite></a>. IETF. 11 March
+          2019. Internet-Draft. URL: <a href=
+          "https://tools.ietf.org/html/draft-ietf-core-resource-directory-20">
+          https://tools.ietf.org/html/draft-ietf-core-resource-directory-20</a>
         </dd>
         <dt id="bib-ecmascript">[ECMAScript]</dt>
         <dd>
@@ -5551,31 +5543,8 @@
           "https://www.w3.org/TR/eventsource/">https://www.w3.org/TR/eventsource/</a>
         </dd>
         <dt id="bib-hci">[HCI]</dt>
-        <dd>
-          <a href=
-          "https://www.interaction-design.org/literature/book/the-encyclopedia-of-human-computer-interaction-2nd-ed">
-          <cite>The Encyclopedia of Human-Computer Interaction, 2nd
-          Ed</cite></a>. Interaction Design Foundation. 2013. URL:
-          <a href=
-          "https://www.interaction-design.org/literature/book/the-encyclopedia-of-human-computer-interaction-2nd-ed">
-          https://www.interaction-design.org/literature/book/the-encyclopedia-of-human-computer-interaction-2nd-ed</a>
-        </dd>
-        <dt id="bib-iana-relations">[IANA-RELATIONS]</dt>
-        <dd>
-          <a href=
-          "https://www.iana.org/assignments/link-relations/"><cite>Link
-          Relations</cite></a>. IANA. URL: <a href=
-          "https://www.iana.org/assignments/link-relations/">https://www.iana.org/assignments/link-relations/</a>
-        </dd>
-        <dt id="bib-iana-uri-schemes">[IANA-URI-SCHEMES]</dt>
-        <dd>
-          <a href=
-          "https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml">
-          <cite>Uniform Resource Identifier (URI)
-          Schemes</cite></a>. IANA. URL: <a href=
-          "https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml">
-          https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml</a>
-        </dd>
+        <dd><cite>The Encyclopedia of Human-Computer Interaction,
+        2nd Ed</cite>. Interaction Design Foundation. 2013.</dd>
         <dt id="bib-iec-fotf">[IEC-FOTF]</dt>
         <dd>
           <a href=
@@ -5585,47 +5554,26 @@
           "https://www.iec.ch/whitepaper/pdf/iecWP-futurefactory-LR-en.pdf">
           https://www.iec.ch/whitepaper/pdf/iecWP-futurefactory-LR-en.pdf</a>
         </dd>
-        <dt id="bib-iot-schema-org">[IOT-SCHEMA-ORG]</dt>
+        <dt id="bib-iot-schema-org">[iot-schema-org]</dt>
         <dd>
           <a href=
-          "https://www.w3.org/community/iotschema/"><cite>Schema
-          Extensions for IoT Community Group</cite></a>. URL:
-          <a href=
-          "https://www.w3.org/community/iotschema/">https://www.w3.org/community/iotschema/</a>
+          "https://iot.schema.org/"><cite>iot.schema.org</cite></a>.
+          URL: <a href=
+          "https://iot.schema.org/">https://iot.schema.org/</a>
         </dd>
-        <dt id="bib-iso-iec-2382">[ISO-IEC-2382]</dt>
+        <dt id="bib-json-ld-syntax">[json-ld-syntax]</dt>
         <dd>
+          <a href="https://www.w3.org/TR/json-ld/"><cite>JSON-LD
+          1.0</cite></a>. Manu Sporny; Gregg Kellogg; Markus
+          Lanthaler. W3C. 16 January 2014. W3C Recommendation. URL:
           <a href=
-          "https://www.iso.org/obp/ui/#iso:std:iso-iec:2382:ed-1:v1:en">
-          <cite>Information technology — Vocabulary</cite></a>.
-          ISO. 2015. URL: <a href=
-          "https://www.iso.org/obp/ui/#iso:std:iso-iec:2382:ed-1:v1:en">
-          https://www.iso.org/obp/ui/#iso:std:iso-iec:2382:ed-1:v1:en</a>
-        </dd>
-        <dt id="bib-iso-iec-27000">[ISO-IEC-27000]</dt>
-        <dd>
-          <a href=
-          "https://www.iso.org/obp/ui/#iso:std:iso-iec:27000:ed-5:v1:en">
-          <cite>Information technology — Security techniques —
-          Information security management systems — Overview and
-          vocabulary</cite></a>. ISO. 2018. URL: <a href=
-          "https://www.iso.org/obp/ui/#iso:std:iso-iec:27000:ed-5:v1:en">
-          https://www.iso.org/obp/ui/#iso:std:iso-iec:27000:ed-5:v1:en</a>
-        </dd>
-        <dt id="bib-iso-iec-29100">[ISO-IEC-29100]</dt>
-        <dd>
-          <a href=
-          "https://www.iso.org/obp/ui/#iso:std:iso-iec:29100:ed-1:v1:en">
-          <cite>Information technology — Security techniques —
-          Privacy framework</cite></a>. ISO. 2011. URL: <a href=
-          "https://www.iso.org/obp/ui/#iso:std:iso-iec:29100:ed-1:v1:en">
-          https://www.iso.org/obp/ui/#iso:std:iso-iec:29100:ed-1:v1:en</a>
+          "https://www.w3.org/TR/json-ld/">https://www.w3.org/TR/json-ld/</a>
         </dd>
         <dt id="bib-json-ld11">[JSON-LD11]</dt>
         <dd>
           <a href="https://www.w3.org/TR/json-ld11/"><cite>JSON-LD
           1.1</cite></a>. Gregg Kellogg; Pierre-Antoine Champin.
-          W3C. 9 September 2019. W3C Working Draft. URL: <a href=
+          W3C. 10 May 2019. W3C Working Draft. URL: <a href=
           "https://www.w3.org/TR/json-ld11/">https://www.w3.org/TR/json-ld11/</a>
         </dd>
         <dt id="bib-linked-data">[LINKED-DATA]</dt>
@@ -5646,19 +5594,9 @@
           "http://openmobilealliance.org/release/LightweightM2M/V1_1-20180710-A/OMA-TS-LightweightM2M_Core-V1_1-20180710-A.pdf">
           http://openmobilealliance.org/release/LightweightM2M/V1_1-20180710-A/OMA-TS-LightweightM2M_Core-V1_1-20180710-A.pdf</a>
         </dd>
-        <dt id="bib-mqtt">[MQTT]</dt>
-        <dd>
-          <a href=
-          "http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/mqtt-v3.1.1.html">
-          <cite>MQTT Version 3.1.1 Plus Errata 01</cite></a>.
-          Andrew Banks; Rahul Gupta. OASIS Standard. December 2015.
-          URL: <a href=
-          "http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/mqtt-v3.1.1.html">
-          http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/mqtt-v3.1.1.html</a>
-        </dd>
         <dt id="bib-norman">[NORMAN]</dt>
-        <dd><cite>The Psychology of Everyday Things</cite>. Donald
-        A. Norman. Basic Books. 1988.</dd>
+        <dd><cite>The Psychology of Everyday Things</cite>. Basic
+        Books. 1988.</dd>
         <dt id="bib-ocf">[OCF]</dt>
         <dd>
           <a href=
@@ -5668,16 +5606,9 @@
           "https://openconnectivity.org/developer/specifications">https://openconnectivity.org/developer/specifications</a>
         </dd>
         <dt id="bib-rest">[REST]</dt>
-        <dd>
-          <a href=
-          "https://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf">
-          <cite>REST: Architectural Styles and the Design of
-          Network-based Software Architectures</cite></a>. Roy
-          Thomas Fielding. University of California, Irvine. 2000.
-          PhD thesis. URL: <a href=
-          "https://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf">
-          https://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf</a>
-        </dd>
+        <dd><cite>REST: Architectural Styles and the Design of
+        Network-based Software Architectures</cite>. University of
+        California, Irvine. 2000. PhD thesis.</dd>
         <dt id="bib-rfc4301">[RFC4301]</dt>
         <dd>
           <a href=
@@ -5721,32 +5652,6 @@
           Ed.. IETF. October 2012. Proposed Standard. URL: <a href=
           "https://tools.ietf.org/html/rfc6749">https://tools.ietf.org/html/rfc6749</a>
         </dd>
-        <dt id="bib-rfc7049">[RFC7049]</dt>
-        <dd>
-          <a href=
-          "https://tools.ietf.org/html/rfc7049"><cite>Concise
-          Binary Object Representation (CBOR)</cite></a>. C.
-          Bormann; P. Hoffman. IETF. October 2013. Proposed
-          Standard. URL: <a href=
-          "https://tools.ietf.org/html/rfc7049">https://tools.ietf.org/html/rfc7049</a>
-        </dd>
-        <dt id="bib-rfc7231">[RFC7231]</dt>
-        <dd>
-          <a href=
-          "https://httpwg.org/specs/rfc7231.html"><cite>Hypertext
-          Transfer Protocol (HTTP/1.1): Semantics and
-          Content</cite></a>. R. Fielding, Ed.; J. Reschke, Ed..
-          IETF. June 2014. Proposed Standard. URL: <a href=
-          "https://httpwg.org/specs/rfc7231.html">https://httpwg.org/specs/rfc7231.html</a>
-        </dd>
-        <dt id="bib-rfc7252">[RFC7252]</dt>
-        <dd>
-          <a href="https://tools.ietf.org/html/rfc7252"><cite>The
-          Constrained Application Protocol (CoAP)</cite></a>. Z.
-          Shelby; K. Hartke; C. Bormann. IETF. June 2014. Proposed
-          Standard. URL: <a href=
-          "https://tools.ietf.org/html/rfc7252">https://tools.ietf.org/html/rfc7252</a>
-        </dd>
         <dt id="bib-rfc7641">[RFC7641]</dt>
         <dd>
           <a href=
@@ -5782,7 +5687,7 @@
           "https://sites.google.com/site/smartappliancesproject/ontologies/reference-ontology">
           https://sites.google.com/site/smartappliancesproject/ontologies/reference-ontology</a>
         </dd>
-        <dt id="bib-vocab-ssn">[VOCAB-SSN]</dt>
+        <dt id="bib-vocab-ssn">[vocab-ssn]</dt>
         <dd>
           <a href="https://www.w3.org/TR/vocab-ssn/"><cite>Semantic
           Sensor Network Ontology</cite></a>. Armin Haller;
@@ -5792,7 +5697,7 @@
           "https://www.w3.org/TR/vocab-ssn/">https://www.w3.org/TR/vocab-ssn/</a>
         </dd>
         <dt id="bib-wot-binding-templates">
-        [WOT-BINDING-TEMPLATES]</dt>
+        [wot-binding-templates]</dt>
         <dd>
           <a href=
           "https://www.w3.org/TR/wot-binding-templates/"><cite>Web
@@ -5800,53 +5705,28 @@
           Michael Koster. W3C. 5 April 2018. W3C Note. URL:
           <a href="https://www.w3.org/TR/wot-binding-templates/">https://www.w3.org/TR/wot-binding-templates/</a>
         </dd>
-        <dt id="bib-wot-pioneers-1">[WOT-PIONEERS-1]</dt>
-        <dd>
-          <a href=
-          "https://pdfs.semanticscholar.org/3ee3/a2e8ce93fbf9ba14ad54e12adaeb1f3ca392.pdf">
-          <cite>Mobile Service Interaction with the Web of
-          Things</cite></a>. E. Rukzio, M. Paolucci; M. Wagner, H.
-          Berndt; J. Hamard; A. Schmidt. Proceedings of 13th
-          International Conference on Telecommunications (ICT
-          2006), Funchal, Madeira island, Portugal. May 2006. URL:
-          <a href=
-          "https://pdfs.semanticscholar.org/3ee3/a2e8ce93fbf9ba14ad54e12adaeb1f3ca392.pdf">
-          https://pdfs.semanticscholar.org/3ee3/a2e8ce93fbf9ba14ad54e12adaeb1f3ca392.pdf</a>
-        </dd>
-        <dt id="bib-wot-pioneers-2">[WOT-PIONEERS-2]</dt>
-        <dd>
-          <a href=
-          "http://dret.net/netdret/docs/wilde-irep07-015-restful-things.pdf">
-          <cite>Putting Things to REST</cite></a>. Erik Wilde. UCB
-          iSchool Report 2007-015, UC Berkeley, Berkeley, CA, USA.
-          November 2007. URL: <a href=
-          "http://dret.net/netdret/docs/wilde-irep07-015-restful-things.pdf">
-          http://dret.net/netdret/docs/wilde-irep07-015-restful-things.pdf</a>
-        </dd>
-        <dt id="bib-wot-pioneers-3">[WOT-PIONEERS-3]</dt>
-        <dd>
-          <a href=
-          "https://www.vs.inf.ethz.ch/publ/papers/ostermai-poster-2008.pdf">
-          <cite>Poster Abstract: Dyser – Towards a Real-Time Search
-          Engine for the Web of Things</cite></a>. Benedikt
-          Ostermaier; B. Maryam Elahi; Kay Römer; Michael Fahrmair;
-          Wolfgang Kellerer. Proceedings of ACM SenSys 2008,
-          Raleigh, NC, USA. November 2008. URL: <a href=
-          "https://www.vs.inf.ethz.ch/publ/papers/ostermai-poster-2008.pdf">
-          https://www.vs.inf.ethz.ch/publ/papers/ostermai-poster-2008.pdf</a>
-        </dd>
-        <dt id="bib-wot-pioneers-4">[WOT-PIONEERS-4]</dt>
-        <dd>
-          <a href=
-          "https://ieeexplore.ieee.org/abstract/document/5678452"><cite>
-          A Resource Oriented Architecture for the Web of
-          Things</cite></a>. Dominique Guinard; Vlad Trifa; Erik
-          Wilde. Proceedings of Internet of Things 2010
-          International Conference (IoT 2010). Tokyo, Japan.
-          November 2010. URL: <a href=
-          "https://ieeexplore.ieee.org/abstract/document/5678452">https://ieeexplore.ieee.org/abstract/document/5678452</a>
-        </dd>
-        <dt id="bib-wot-scripting-api">[WOT-SCRIPTING-API]</dt>
+        <dt id="bib-wot-pioneers-1">[wot-pioneers-1]</dt>
+        <dd><cite>Mobile Service Interaction with the Web of
+        Things</cite>. E. Rukzio, M. Paolucci; M. Wagner, H.
+        Berndt; J. Hamard; A. Schmidt. Proceedings of 13th
+        International Conference on Telecommunications (ICT 2006),
+        Funchal, Madeira island, Portugal. May 2006.</dd>
+        <dt id="bib-wot-pioneers-2">[wot-pioneers-2]</dt>
+        <dd><cite>Putting Things to REST</cite>. Erik Wilde. UCB
+        iSchool Report 2007-015, UC Berkeley, Berkeley, CA, USA.
+        November 2007.</dd>
+        <dt id="bib-wot-pioneers-3">[wot-pioneers-3]</dt>
+        <dd><cite>Poster Abstract: Dyser – Towards a Real-Time
+        Search Engine for the Web of Things</cite>. Benedikt
+        Ostermaier; B. Maryam Elahi; Kay Römer; Michael Fahrmair;
+        Wolfgang Kellerer. Proceedings of ACM SenSys 2008, Raleigh,
+        NC, USA. November 2008.</dd>
+        <dt id="bib-wot-pioneers-4">[wot-pioneers-4]</dt>
+        <dd><cite>A Resource Oriented Architecture for the Web of
+        Things</cite>. Dominique Guinard; Vlad Trifa; Erik Wilde.
+        Proceedings of Internet of Things 2010 International
+        Conference (IoT 2010). Tokyo, Japan. November 2010.</dd>
+        <dt id="bib-wot-scripting-api">[wot-scripting-api]</dt>
         <dd>
           <a href=
           "https://www.w3.org/TR/wot-scripting-api/"><cite>Web of
@@ -5855,35 +5735,19 @@
           November 2018. W3C Working Draft. URL: <a href=
           "https://www.w3.org/TR/wot-scripting-api/">https://www.w3.org/TR/wot-scripting-api/</a>
         </dd>
-        <dt id="bib-wot-security">[WOT-SECURITY]</dt>
+        <dt id="bib-wot-security">[wot-security]</dt>
         <dd>
           <a href="https://www.w3.org/TR/wot-security/"><cite>Web
           of Things (WoT) Security and Privacy
-          Guidelines</cite></a>. Elena Reshetova; Michael McCool.
-          W3C. 6 November 2019. W3C Note. URL: <a href=
+          Considerations</cite></a>. Elena Reshetova; Michael
+          McCool. W3C. 3 December 2018. W3C Note. URL: <a href=
           "https://www.w3.org/TR/wot-security/">https://www.w3.org/TR/wot-security/</a>
         </dd>
-        <dt id="bib-wot-thing-description">
-        [WOT-THING-DESCRIPTION]</dt>
-        <dd>
-          <a href=
-          "https://www.w3.org/TR/wot-thing-description/"><cite>Web
-          of Things (WoT) Thing Description</cite></a>. Sebastian
-          Käbisch; Takuki Kamiya; Michael McCool; Victor Charpenay.
-          W3C. 6 November 2019. W3C Candidate Recommendation. URL:
-          <a href=
-          "https://www.w3.org/TR/wot-thing-description/">https://www.w3.org/TR/wot-thing-description/</a>
-        </dd>
         <dt id="bib-y.4409-y.2070">[Y.4409-Y.2070]</dt>
-        <dd>
-          <a href=
-          "https://www.itu.int/rec/T-REC-Y.2070-201501-I"><cite>ITU-T
-          Rec. Y.4409/Y.2070 (01/2015) Requirements and
-          architecture of the home energy management system and
-          home network services</cite></a> . ITU-T. January 2015.
-          Recommendation. URL: <a href=
-          "https://www.itu.int/rec/T-REC-Y.2070-201501-I">https://www.itu.int/rec/T-REC-Y.2070-201501-I</a>
-        </dd>
+        <dd><cite>ITU-T Rec. Y.4409/Y.2070 (01/2015) Requirements
+        and architecture of the home energy management system and
+        home network services</cite> . ITU-T. January 2015.
+        Recommendation.</dd>
       </dl>
     </section>
   </section>
