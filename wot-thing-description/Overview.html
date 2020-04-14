@@ -4,7 +4,7 @@
   <meta name="generator" content=
   "HTML Tidy for HTML5 for Linux version 5.7.27">
   <meta charset="utf-8">
-  <meta name="generator" content="ReSpec 24.21.7">
+  <meta name="generator" content="ReSpec 24.34.0">
   <meta name="viewport" content=
   "width=device-width, initial-scale=1, shrink-to-fit=no">
   <style>
@@ -64,12 +64,10 @@
 
   .warning-title:before{
     content: "⚠"; /*U+26A0 WARNING SIGN*/
-    font-size: 3em;
+    font-size: 1.3em;
     float: left;
-    height: 100%;
     padding-right: .3em;
-    vertical-align: top;
-    margin-top: -0.5em;
+    margin-top: -0.3em;
   }
 
   li.task-list-item {
@@ -164,24 +162,18 @@
   animation: pop 0.25s ease-in-out 0s 1;
   }
 
-  /* TODO: Remove once https://github.com/w3c/tr-design/pull/176 is merged. */
-  .respec-offending-element a[href] {
-  margin: 0;
+  .respec-offending-element,
+  a[href].respec-offending-element {
+  text-decoration: red wavy underline;
   }
-
-  .respec-offending-element {
-  display: inline-block;
-  position: relative;
-  /* Red squiggly line */
-  background: url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=)
-    bottom repeat-x;
+  @supports not (text-decoration: red wavy underline) {
+  .respec-offending-element:not(pre) {
+    display: inline-block;
   }
-  @supports (text-decoration-style: wavy) {
   .respec-offending-element {
-    background: none;
-    text-decoration-line: underline;
-    text-decoration-style: wavy;
-    text-decoration-color: red;
+    /* Red squiggly line */
+    background: url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=)
+      bottom repeat-x;
   }
   }
 
@@ -243,6 +235,12 @@
 
   .simple th {
   background: #005a9c;
+  color: #fff;
+  padding: 3px 5px;
+  text-align: left;
+  }
+
+  .simple th a {
   color: #fff;
   padding: 3px 5px;
   text-align: left;
@@ -523,28 +521,52 @@
   #td-default-in-pop {
   background-color: yellow;
   }
-  #td-default-in-apikey {
-  background-color: yellow;
-  }
   #td-default-alg-pop {
   background-color: yellow;
   }
   #td-default-format-pop {
   background-color: yellow;
   }
-  #td-default-qop {
+  #separator {
   background-color: yellow;
   }
-  #td-default-flow {
+  #td-security-oauth2-implicit-flow {
   background-color: yellow;
   }
-  #td-vocab-proxy--SecurityScheme {
+  #td-security-oauth2-password-client-flow {
   background-color: yellow;
   }
-  #td-vocab-qop--DigestSecurityScheme {
+  #td-security-pop-format-extensions {
   background-color: yellow;
   }
-  #td-vocab-scopes--Form {
+  #td-vocab-alg--PoPSecurityScheme {
+  background-color: yellow;
+  }
+  #td-vocab-format--PoPSecurityScheme {
+  background-color: yellow;
+  }
+  #td-vocab-identity--CertSecurityScheme {
+  background-color: yellow;
+  }
+  #td-vocab-identity--PublicSecurityScheme {
+  background-color: yellow;
+  }
+  #td-vocab-in--PoPSecurityScheme {
+  background-color: yellow;
+  }
+  #td-vocab-name--PoPSecurityScheme {
+  background-color: yellow;
+  }
+  #td-vocab-scheme--SecurityScheme_cert {
+  background-color: yellow;
+  }
+  #td-vocab-scheme--SecurityScheme_pop {
+  background-color: yellow;
+  }
+  #td-vocab-scheme--SecurityScheme_public {
+  background-color: yellow;
+  }
+  #td-writeall-consumer {
   background-color: yellow;
   }
 
@@ -660,7 +682,6 @@
   var {
   position: relative;
   cursor: pointer;
-  display: inline-block;
   }
 
   var[data-type]::before,
@@ -695,6 +716,8 @@
   padding: 6px;
   border-radius: 3px;
   color: #daca88;
+  text-indent: 0;
+  font-weight: normal;
   }
 
   var[data-type]:hover::after,
@@ -705,11 +728,11 @@
   <script id="initialUserConfig" type="application/json">
   {
   "specStatus": "CR",
-  "crEnd": "2019-06-13",
-  "previousMaturity": "WD",
-  "previousPublishDate": "2018-10-21",
+  "crEnd": "2019-12-03",
+  "previousMaturity": "CR",
+  "previousPublishDate": "2019-05-16",
   "implementationReportURI": "https://w3c.github.io/wot-thing-description/testing/report.html",
-  "processVersion": 2017,
+  "processVersion": 2019,
   "shortName": "wot-thing-description",
   "copyrightStart": 2017,
   "noLegacyStyle": true,
@@ -718,11 +741,11 @@
   "format": "markdown",
   "wg": "Web of Things Working Group",
   "wgURI": "https://www.w3.org/WoT/WG/",
+  "charterDisclosureURI": "https://www.w3.org/2004/01/pp-impl/95969/status",
   "wgPublicList": "public-wot-wg",
   "edDraftURI": "https://w3c.github.io/wot-thing-description/",
   "github": "https://github.com/w3c/wot-thing-description",
-  "githubAPI": "https://api.github.com/repos/w3c/wot-thing-description",
-  "issueBase": "https://www.github.com/w3c/wot-thing-description/issues",
+  "issueBase": "https://github.com/w3c/wot-thing-description/issues",
   "editors": [
     {
       "name": "Sebastian Kaebisch",
@@ -733,44 +756,41 @@
     {
       "name": "Takuki Kamiya",
       "w3cid": "29376",
-      "company": "Fujitsu Laboratories of America, Inc.",
+      "company": "Fujitsu Laboratories of America",
       "companyURL": "https://www.fujitsu.com/"
     },
     {
       "name": "Michael McCool",
-      "w3cid": "",
+      "w3cid": "93137",
       "company": "Intel",
       "companyURL": "https://www.intel.com/"
     },
     {
       "name": "Victor Charpenay",
-      "w3cid": "",
+      "w3cid": "84448",
       "company": "Siemens AG",
       "companyURL": "https://www.siemens.com/"
+    },
+    {
+      "name": "Matthias Kovatsch",
+      "w3cid": "75998",
+      "company": "Huawei",
+      "companyURL": "https://www.huawei.com/"
     }
   ],
   "localBiblio": {
-    "JSON-SCHEMA-VALIDATION": {
+    "JSON-SCHEMA": {
       "title": "JSON Schema Validation: A Vocabulary for Structural Validation of JSON",
-      "href": "https://tools.ietf.org/html/draft-handrews-json-schema-validation-00",
+      "href": "https://tools.ietf.org/html/draft-handrews-json-schema-validation-01",
       "authors": [
         "Austin Wright",
         "Henry Andrews",
         "Geraint Luff"
       ],
       "status": "Internet-Draft",
+      "date": "19 March 2018",
       "publisher": "IETF",
-      "id": "json-schema-validation"
-    },
-    "JSON-SCHEMA-CORE": {
-      "title": "JSON Schema: A Media Type for Describing JSON Documents",
-      "href": "https://tools.ietf.org/html/draft-handrews-json-schema-00",
-      "authors": [
-        "Austin Wright",
-        "Henry Andrews"
-      ],
-      "status": "Internet-Draft",
-      "publisher": "IETF"
+      "id": "json-schema"
     },
     "OPENAPI": {
       "title": "OpenAPI Specification: Version 3.0.1",
@@ -790,7 +810,7 @@
       "date": "7 December 2017",
       "id": "openapi"
     },
-    "SemVer": {
+    "SEMVER": {
       "title": "Semantic Versioning 2.0.0",
       "href": "https://semver.org/",
       "authors": [
@@ -801,7 +821,7 @@
     },
     "WOT-ARCHITECTURE": {
       "title": "Web of Things (WoT) Architecture",
-      "href": "https://w3c.github.io/wot-architecture/",
+      "href": "https://www.w3.org/TR/wot-architecture/",
       "authors": [
         "Matthias Kovatsch",
         "Ryuichi Matsukura",
@@ -811,36 +831,33 @@
         "Kazuo Kajimoto"
       ],
       "publisher": "W3C",
-      "date": "May 2019",
+      "date": "November 2019",
       "id": "wot-architecture"
     },
-    "WOT-SECURITY-CONSIDERATIONS": {
-      "title": "Web of Things (WoT) Security and Privacy Considerations",
-      "href": "https://w3c.github.io/wot-security/",
+    "WOT-SECURITY-GUIDELINES": {
+      "title": "Web of Things (WoT) Security and Privacy Guidelines",
+      "href": "https://www.w3.org/TR/wot-security/",
       "authors": [
-        null,
         "Michael McCool",
         "Elena Reshetova"
       ],
       "publisher": "W3C",
-      "date": "March 2019",
-      "id": "wot-security-considerations"
+      "date": "November 2019",
+      "id": "wot-security-guidelines"
     },
     "MQTT": {
-      "title": "MQTT Version 5.0",
-      "href": "http://docs.oasis-open.org/mqtt/mqtt/v5.0/cos01/mqtt-v5.0-cos01.html",
+      "title": "MQTT Version 3.1.1",
+      "href": "http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/mqtt-v3.1.1.html",
       "authors": [
         "Andrew Banks",
-        "Ed Briggs",
-        "Ken Borgendale",
         "Rahul Gupta"
       ],
       "publisher": "OASIS",
-      "date": "31 October 2018",
-      "status": "Candidate OASIS Standard 01",
+      "date": "10 December 2015",
+      "status": "OASIS Standard Incorporating Approved Errata 01",
       "id": "mqtt"
     },
-    "draft-ietf-ace-oauth-authz": {
+    "ACE": {
       "title": "Authentication and Authorization for Constrained Environments (ACE) using the OAuth 2.0 Framework (ACE-OAuth)",
       "href": "https://tools.ietf.org/html/draft-ietf-ace-oauth-authz-24",
       "authors": [
@@ -853,9 +870,9 @@
       "publisher": "IETF",
       "date": "27 March 2019",
       "status": "Internet-Draft",
-      "id": "draft-ietf-ace-oauth-authz"
+      "id": "ace"
     },
-    "Rijgersberg-et-al-2013": {
+    "RIJGERSBERG": {
       "href": "http://www.semantic-web-journal.net/content/ontology-units-measure-and-related-concepts",
       "authors": [
         "Hajo Rijgersberg",
@@ -865,7 +882,7 @@
       "title": "Ontology of Units of Measure and Related Concepts",
       "publisher": "Semantic Web journal, IOS Press",
       "date": "2013",
-      "id": "rijgersberg-et-al-2013"
+      "id": "rijgersberg"
     },
     "LDML": {
       "title": "Unicode Technical Standard #35: Unicode Locale Data Markup Language (LDML)",
@@ -891,7 +908,7 @@
         },
         {
           "value": "Commit history",
-          "href": "https://github.com/w3c/wot-thing-description/commits/gh-pages"
+          "href": "https://github.com/w3c/wot-thing-description/commits/"
         },
         {
           "value": "Pull requests",
@@ -922,8 +939,8 @@
       ]
     }
   ],
-  "publishISODate": "2019-05-16T00:00:00.000Z",
-  "generatedSubtitle": "Candidate Recommendation 16 May 2019"
+  "publishISODate": "2019-11-06T00:00:00.000Z",
+  "generatedSubtitle": "Candidate Recommendation 6 November 2019"
   }
   </script>
   <meta name="description" content=
@@ -938,19 +955,19 @@
   Commuityが翻訳と修正をおこなって公開しているものです。この文書の正式版は、あくまでW3Cのサイト内にある英語版であり、この文書には翻訳上の間違い、あるいは不適切な表現が含まれている可能性がありますのでご注意ください。</p>
   <hr>
   <div class="head">
-    <a class="logo" href="https://www.w3.org/"><img alt="W3C" src=
-    "https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width="72"
-    height="48"></a>
+    <a class="logo" href="https://www.w3.org/"><img alt="W3C"
+    width="72" height="48" src=
+    "https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a>
     <h1 id="title" class="title p-name">Web of Things (WoT) Thing
     Description</h1>
     <h2>W3C Candidate Recommendation <time class="dt-published"
-    datetime="2019-05-16">16 May 2019</time></h2>
+    datetime="2019-11-06">6 November 2019</time></h2>
     <dl>
       <dt>This version:</dt>
       <dd>
         <a class="u-url" href=
-        "https://www.w3.org/TR/2019/CR-wot-thing-description-20190516/">
-        https://www.w3.org/TR/2019/CR-wot-thing-description-20190516/</a>
+        "https://www.w3.org/TR/2019/CR-wot-thing-description-20191106/">
+        https://www.w3.org/TR/2019/CR-wot-thing-description-20191106/</a>
       </dd>
       <dt>Latest published version:</dt>
       <dd>
@@ -971,8 +988,8 @@
       <dt>Previous version:</dt>
       <dd>
         <a href=
-        "https://www.w3.org/TR/2018/WD-wot-thing-description-20181021/">
-        https://www.w3.org/TR/2018/WD-wot-thing-description-20181021/</a>
+        "https://www.w3.org/TR/2019/CR-wot-thing-description-20190516/">
+        https://www.w3.org/TR/2019/CR-wot-thing-description-20190516/</a>
       </dd>
       <dt>Editors:</dt>
       <dd class="p-author h-card vcard" data-editor-id="43064">
@@ -983,18 +1000,23 @@
       <dd class="p-author h-card vcard" data-editor-id="29376">
         <span class="p-name fn">Takuki Kamiya</span> (<a class=
         "p-org org h-org h-card" href=
-        "https://www.fujitsu.com/">Fujitsu Laboratories of America,
-        Inc.</a>)
+        "https://www.fujitsu.com/">Fujitsu Laboratories of
+        America</a>)
       </dd>
-      <dd class="p-author h-card vcard">
+      <dd class="p-author h-card vcard" data-editor-id="93137">
         <span class="p-name fn">Michael McCool</span> (<a class=
         "p-org org h-org h-card" href=
         "https://www.intel.com/">Intel</a>)
       </dd>
-      <dd class="p-author h-card vcard">
+      <dd class="p-author h-card vcard" data-editor-id="84448">
         <span class="p-name fn">Victor Charpenay</span> (<a class=
         "p-org org h-org h-card" href=
         "https://www.siemens.com/">Siemens AG</a>)
+      </dd>
+      <dd class="p-author h-card vcard" data-editor-id="75998">
+        <span class="p-name fn">Matthias Kovatsch</span> (<a class=
+        "p-org org h-org h-card" href=
+        "https://www.huawei.com/">Huawei</a>)
       </dd>
       <dt>Participate:</dt>
       <dd>
@@ -1009,7 +1031,7 @@
       </dd>
       <dd>
         <a href=
-        "https://github.com/w3c/wot-thing-description/commits/gh-pages">
+        "https://github.com/w3c/wot-thing-description/commits/">
         Commit history</a>
       </dd>
       <dd>
@@ -11320,13 +11342,13 @@
   <p>また、本文書改良を可能にしたサポート、技術的入力、および提案を頂いたW3Cスタッフ及びW3C WoTインタレストグループ
   (WoT IG)およびワーキンググループ (WoT WG)の他のすべての現役および前参加者に対し謝意を表します。</p>
   <section id="references" class="appendix">
-    <h2 id="g-references"></h2><bdi class="secno">G.</bdi>
+    <h2 id="g-references"><bdi class="secno">G.</bdi>
     References<a class="self-link" aria-label="§" href=
-    "#references"></a>
+    "#references"></a></h2>
     <section id="normative-references">
-      <h3 id="g-1-normative-references"></h3><bdi class=
+      <h3 id="g-1-normative-references"><bdi class=
       "secno">G.1</bdi> Normative references<a class="self-link"
-      aria-label="§" href="#normative-references"></a>
+      aria-label="§" href="#normative-references"></a></h3>
       <dl class="bibliography">
         <dt id="bib-bcp47">[BCP47]</dt>
         <dd>
@@ -11336,30 +11358,22 @@
           URL: <a href=
           "https://tools.ietf.org/html/bcp47">https://tools.ietf.org/html/bcp47</a>
         </dd>
-        <dt id="bib-http-in-rdf10">[HTTP-in-RDF10]</dt>
-        <dd>
-          <a href="https://www.w3.org/TR/HTTP-in-RDF10/"><cite>HTTP
-          Vocabulary in RDF 1.0</cite></a>. Johannes Koch; Carlos
-          A. Velasco; Philip Ackermann. W3C. 2 February 2017. W3C
-          Note. URL: <a href=
-          "https://www.w3.org/TR/HTTP-in-RDF10/">https://www.w3.org/TR/HTTP-in-RDF10/</a>
-        </dd>
-        <dt id="bib-iana-media-types">[IANA-MEDIA-TYPES]</dt>
+        <dt id="bib-eventsource">[eventsource]</dt>
         <dd>
           <a href=
-          "https://www.iana.org/assignments/media-types/"><cite>Media
-          Types</cite></a>. IANA. URL: <a href=
-          "https://www.iana.org/assignments/media-types/">https://www.iana.org/assignments/media-types/</a>
+          "https://www.w3.org/TR/eventsource/"><cite>Server-Sent
+          Events</cite></a>. Ian Hickson. W3C. 3 February 2015. W3C
+          Recommendation. URL: <a href=
+          "https://www.w3.org/TR/eventsource/">https://www.w3.org/TR/eventsource/</a>
         </dd>
-        <dt id="bib-mqtt">[MQTT]</dt>
+        <dt id="bib-rfc2046">[RFC2046]</dt>
         <dd>
           <a href=
-          "http://docs.oasis-open.org/mqtt/mqtt/v5.0/cos01/mqtt-v5.0-cos01.html">
-          <cite>MQTT Version 5.0</cite></a>. Andrew Banks; Ed
-          Briggs; Ken Borgendale; Rahul Gupta. OASIS. 31 October
-          2018. Candidate OASIS Standard 01. URL: <a href=
-          "http://docs.oasis-open.org/mqtt/mqtt/v5.0/cos01/mqtt-v5.0-cos01.html">
-          http://docs.oasis-open.org/mqtt/mqtt/v5.0/cos01/mqtt-v5.0-cos01.html</a>
+          "https://tools.ietf.org/html/rfc2046"><cite>Multipurpose
+          Internet Mail Extensions (MIME) Part Two: Media
+          Types</cite></a>. N. Freed; N. Borenstein. IETF. November
+          1996. Draft Standard. URL: <a href=
+          "https://tools.ietf.org/html/rfc2046">https://tools.ietf.org/html/rfc2046</a>
         </dd>
         <dt id="bib-rfc2119">[RFC2119]</dt>
         <dd>
@@ -11386,13 +11400,6 @@
           <a href=
           "https://tools.ietf.org/html/rfc3629">https://tools.ietf.org/html/rfc3629</a>
         </dd>
-        <dt id="bib-rfc3966">[RFC3966]</dt>
-        <dd>
-          <a href="https://tools.ietf.org/html/rfc3966"><cite>The
-          tel URI for Telephone Numbers</cite></a>. H. Schulzrinne.
-          IETF. December 2004. Proposed Standard. URL: <a href=
-          "https://tools.ietf.org/html/rfc3966">https://tools.ietf.org/html/rfc3966</a>
-        </dd>
         <dt id="bib-rfc3986">[RFC3986]</dt>
         <dd>
           <a href=
@@ -11402,13 +11409,14 @@
           2005. Internet Standard. URL: <a href=
           "https://tools.ietf.org/html/rfc3986">https://tools.ietf.org/html/rfc3986</a>
         </dd>
-        <dt id="bib-rfc6068">[RFC6068]</dt>
+        <dt id="bib-rfc3987">[RFC3987]</dt>
         <dd>
-          <a href="https://tools.ietf.org/html/rfc6068"><cite>The
-          'mailto' URI Scheme</cite></a>. M. Duerst; L. Masinter;
-          J. Zawinski. IETF. October 2010. Proposed Standard. URL:
           <a href=
-          "https://tools.ietf.org/html/rfc6068">https://tools.ietf.org/html/rfc6068</a>
+          "https://tools.ietf.org/html/rfc3987"><cite>Internationalized
+          Resource Identifiers (IRIs)</cite></a>. M. Duerst; M.
+          Suignard. IETF. January 2005. Proposed Standard. URL:
+          <a href=
+          "https://tools.ietf.org/html/rfc3987">https://tools.ietf.org/html/rfc3987</a>
         </dd>
         <dt id="bib-rfc6570">[RFC6570]</dt>
         <dd>
@@ -11425,14 +11433,13 @@
           Ed.. IETF. October 2012. Proposed Standard. URL: <a href=
           "https://tools.ietf.org/html/rfc6749">https://tools.ietf.org/html/rfc6749</a>
         </dd>
-        <dt id="bib-rfc7231">[RFC7231]</dt>
+        <dt id="bib-rfc6750">[RFC6750]</dt>
         <dd>
-          <a href=
-          "https://tools.ietf.org/html/rfc7231"><cite>Hypertext
-          Transfer Protocol (HTTP/1.1): Semantics and
-          Content</cite></a>. R. Fielding, Ed.; J. Reschke, Ed..
-          IETF. June 2014. Proposed Standard. URL: <a href=
-          "https://tools.ietf.org/html/rfc7231">https://tools.ietf.org/html/rfc7231</a>
+          <a href="https://tools.ietf.org/html/rfc6750"><cite>The
+          OAuth 2.0 Authorization Framework: Bearer Token
+          Usage</cite></a>. M. Jones; D. Hardt. IETF. October 2012.
+          Proposed Standard. URL: <a href=
+          "https://tools.ietf.org/html/rfc6750">https://tools.ietf.org/html/rfc6750</a>
         </dd>
         <dt id="bib-rfc7252">[RFC7252]</dt>
         <dd>
@@ -11455,6 +11462,23 @@
           Web Token (JWT)</cite></a>. M. Jones; J. Bradley; N.
           Sakimura. IETF. May 2015. Proposed Standard. URL:
           <a href="https://tools.ietf.org/html/rfc7519">https://tools.ietf.org/html/rfc7519</a>
+        </dd>
+        <dt id="bib-rfc7616">[RFC7616]</dt>
+        <dd>
+          <a href=
+          "https://httpwg.org/specs/rfc7616.html"><cite>HTTP Digest
+          Access Authentication</cite></a>. R. Shekh-Yusef, Ed.; D.
+          Ahrens; S. Bremer. IETF. September 2015. Proposed
+          Standard. URL: <a href=
+          "https://httpwg.org/specs/rfc7616.html">https://httpwg.org/specs/rfc7616.html</a>
+        </dd>
+        <dt id="bib-rfc7617">[RFC7617]</dt>
+        <dd>
+          <a href="https://httpwg.org/specs/rfc7617.html"><cite>The
+          'Basic' HTTP Authentication Scheme</cite></a>. J.
+          Reschke. IETF. September 2015. Proposed Standard. URL:
+          <a href=
+          "https://httpwg.org/specs/rfc7617.html">https://httpwg.org/specs/rfc7617.html</a>
         </dd>
         <dt id="bib-rfc7797">[RFC7797]</dt>
         <dd>
@@ -11490,10 +11514,10 @@
         </dd>
         <dt id="bib-rfc8288">[RFC8288]</dt>
         <dd>
-          <a href="https://tools.ietf.org/html/rfc8288"><cite>Web
+          <a href="https://httpwg.org/specs/rfc8288.html"><cite>Web
           Linking</cite></a>. M. Nottingham. IETF. October 2017.
           Proposed Standard. URL: <a href=
-          "https://tools.ietf.org/html/rfc8288">https://tools.ietf.org/html/rfc8288</a>
+          "https://httpwg.org/specs/rfc8288.html">https://httpwg.org/specs/rfc8288.html</a>
         </dd>
         <dt id="bib-rfc8392">[RFC8392]</dt>
         <dd>
@@ -11503,32 +11527,13 @@
           Standard. URL: <a href=
           "https://tools.ietf.org/html/rfc8392">https://tools.ietf.org/html/rfc8392</a>
         </dd>
-        <dt id="bib-shacl">[SHACL]</dt>
-        <dd>
-          <a href="https://www.w3.org/TR/shacl/"><cite>Shapes
-          Constraint Language (SHACL)</cite></a>. Holger Knublauch;
-          Dimitris Kontokostas. W3C. 20 July 2017. W3C
-          Recommendation. URL: <a href=
-          "https://www.w3.org/TR/shacl/">https://www.w3.org/TR/shacl/</a>
-        </dd>
-        <dt id="bib-wot-architecture">[WOT-ARCHITECTURE]</dt>
+        <dt id="bib-websub">[websub]</dt>
         <dd>
           <a href=
-          "https://w3c.github.io/wot-architecture/"><cite>Web of
-          Things (WoT) Architecture</cite></a>. Matthias Kovatsch;
-          Ryuichi Matsukura; Michael Lagally; Toru Kawaguchi;
-          Kunihiko Toumura; Kazuo Kajimoto. W3C. May 2019. URL:
-          <a href=
-          "https://w3c.github.io/wot-architecture/">https://w3c.github.io/wot-architecture/</a>
-        </dd>
-        <dt id="bib-wot-binding-templates">
-        [WoT-Binding-Templates]</dt>
-        <dd>
-          <a href=
-          "https://www.w3.org/TR/wot-binding-templates/"><cite>Web
-          of Things (WoT) Protocol Binding Templates</cite></a>.
-          Michael Koster. W3C. 5 April 2018. W3C Note. URL:
-          <a href="https://www.w3.org/TR/wot-binding-templates/">https://www.w3.org/TR/wot-binding-templates/</a>
+          "https://www.w3.org/TR/websub/"><cite>WebSub</cite></a>.
+          Julien Genestoux; Aaron Parecki. W3C. 23 January 2018.
+          W3C Recommendation. URL: <a href=
+          "https://www.w3.org/TR/websub/">https://www.w3.org/TR/websub/</a>
         </dd>
         <dt id="bib-x509v3">[X509V3]</dt>
         <dd><cite>ITU-T Recommendation X.509 version 3 (1997).
@@ -11536,7 +11541,7 @@
         The Directory Authentication Framework"&nbsp; ISO/IEC
         9594-8:1997.</cite>. ITU.</dd>
         <dt id="bib-xmlschema11-2-20120405">
-        [xmlschema11-2-20120405]</dt>
+        [XMLSCHEMA11-2-20120405]</dt>
         <dd>
           <a href=
           "https://www.w3.org/TR/2012/REC-xmlschema11-2-20120405/"><cite>
@@ -11550,12 +11555,11 @@
       </dl>
     </section>
     <section id="informative-references">
-      <h3 id="g-2-informative-references"></h3><bdi class=
+      <h3 id="g-2-informative-references"><bdi class=
       "secno">G.2</bdi> Informative references<a class="self-link"
-      aria-label="§" href="#informative-references"></a>
+      aria-label="§" href="#informative-references"></a></h3>
       <dl class="bibliography">
-        <dt id="bib-draft-ietf-ace-oauth-authz">
-        [draft-ietf-ace-oauth-authz]</dt>
+        <dt id="bib-ace">[ACE]</dt>
         <dd>
           <a href=
           "https://tools.ietf.org/html/draft-ietf-ace-oauth-authz-24">
@@ -11567,7 +11571,22 @@
           "https://tools.ietf.org/html/draft-ietf-ace-oauth-authz-24">
           https://tools.ietf.org/html/draft-ietf-ace-oauth-authz-24</a>
         </dd>
-        <dt id="bib-iana-uri-schemes">[iana-uri-schemes]</dt>
+        <dt id="bib-http-in-rdf10">[HTTP-in-RDF10]</dt>
+        <dd>
+          <a href="https://www.w3.org/TR/HTTP-in-RDF10/"><cite>HTTP
+          Vocabulary in RDF 1.0</cite></a>. Johannes Koch; Carlos
+          A. Velasco; Philip Ackermann. W3C. 2 February 2017. W3C
+          Note. URL: <a href=
+          "https://www.w3.org/TR/HTTP-in-RDF10/">https://www.w3.org/TR/HTTP-in-RDF10/</a>
+        </dd>
+        <dt id="bib-iana-media-types">[IANA-MEDIA-TYPES]</dt>
+        <dd>
+          <a href=
+          "https://www.iana.org/assignments/media-types/"><cite>Media
+          Types</cite></a>. IANA. URL: <a href=
+          "https://www.iana.org/assignments/media-types/">https://www.iana.org/assignments/media-types/</a>
+        </dd>
+        <dt id="bib-iana-uri-schemes">[IANA-URI-SCHEMES]</dt>
         <dd>
           <a href=
           "https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml">
@@ -11576,31 +11595,23 @@
           "https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml">
           https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml</a>
         </dd>
-        <dt id="bib-json-ld11">[json-ld11]</dt>
+        <dt id="bib-json-ld11">[JSON-LD11]</dt>
         <dd>
           <a href="https://www.w3.org/TR/json-ld11/"><cite>JSON-LD
           1.1</cite></a>. Gregg Kellogg; Pierre-Antoine Champin.
-          W3C. 10 May 2019. W3C Working Draft. URL: <a href=
+          W3C. 9 September 2019. W3C Working Draft. URL: <a href=
           "https://www.w3.org/TR/json-ld11/">https://www.w3.org/TR/json-ld11/</a>
         </dd>
-        <dt id="bib-json-ld11-api">[json-ld11-api]</dt>
+        <dt id="bib-json-schema">[JSON-SCHEMA]</dt>
         <dd>
           <a href=
-          "https://www.w3.org/TR/json-ld11-api/"><cite>JSON-LD 1.1
-          Processing Algorithms and API</cite></a>. Gregg Kellogg.
-          W3C. 10 May 2019. W3C Working Draft. URL: <a href=
-          "https://www.w3.org/TR/json-ld11-api/">https://www.w3.org/TR/json-ld11-api/</a>
-        </dd>
-        <dt id="bib-json-schema-validation">
-        [JSON-SCHEMA-VALIDATION]</dt>
-        <dd>
-          <a href=
-          "https://tools.ietf.org/html/draft-handrews-json-schema-validation-00">
+          "https://tools.ietf.org/html/draft-handrews-json-schema-validation-01">
           <cite>JSON Schema Validation: A Vocabulary for Structural
           Validation of JSON</cite></a>. Austin Wright; Henry
-          Andrews; Geraint Luff. IETF. Internet-Draft. URL:
-          <a href="https://tools.ietf.org/html/draft-handrews-json-schema-validation-00">
-          https://tools.ietf.org/html/draft-handrews-json-schema-validation-00</a>
+          Andrews; Geraint Luff. IETF. 19 March 2018.
+          Internet-Draft. URL: <a href=
+          "https://tools.ietf.org/html/draft-handrews-json-schema-validation-01">
+          https://tools.ietf.org/html/draft-handrews-json-schema-validation-01</a>
         </dd>
         <dt id="bib-ldml">[LDML]</dt>
         <dd>
@@ -11618,6 +11629,16 @@
           July 2006. W3C-Internal Document. URL: <a href=
           "https://www.w3.org/DesignIssues/LinkedData.html">https://www.w3.org/DesignIssues/LinkedData.html</a>
         </dd>
+        <dt id="bib-mqtt">[MQTT]</dt>
+        <dd>
+          <a href=
+          "http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/mqtt-v3.1.1.html">
+          <cite>MQTT Version 3.1.1</cite></a>. Andrew Banks; Rahul
+          Gupta. OASIS. 10 December 2015. OASIS Standard
+          Incorporating Approved Errata 01. URL: <a href=
+          "http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/mqtt-v3.1.1.html">
+          http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/mqtt-v3.1.1.html</a>
+        </dd>
         <dt id="bib-openapi">[OPENAPI]</dt>
         <dd>
           <a href="https://swagger.io/specification/"><cite>OpenAPI
@@ -11628,52 +11649,38 @@
           <a href=
           "https://swagger.io/specification/">https://swagger.io/specification/</a>
         </dd>
-        <dt id="bib-owl2-manchester-syntax">
-        [owl2-manchester-syntax]</dt>
+        <dt id="bib-rdf-schema">[RDF-SCHEMA]</dt>
+        <dd>
+          <a href="https://www.w3.org/TR/rdf-schema/"><cite>RDF
+          Schema 1.1</cite></a>. Dan Brickley; Ramanathan Guha.
+          W3C. 25 February 2014. W3C Recommendation. URL: <a href=
+          "https://www.w3.org/TR/rdf-schema/">https://www.w3.org/TR/rdf-schema/</a>
+        </dd>
+        <dt id="bib-rfc3966">[RFC3966]</dt>
+        <dd>
+          <a href="https://tools.ietf.org/html/rfc3966"><cite>The
+          tel URI for Telephone Numbers</cite></a>. H. Schulzrinne.
+          IETF. December 2004. Proposed Standard. URL: <a href=
+          "https://tools.ietf.org/html/rfc3966">https://tools.ietf.org/html/rfc3966</a>
+        </dd>
+        <dt id="bib-rfc6068">[RFC6068]</dt>
+        <dd>
+          <a href="https://tools.ietf.org/html/rfc6068"><cite>The
+          'mailto' URI Scheme</cite></a>. M. Duerst; L. Masinter;
+          J. Zawinski. IETF. October 2010. Proposed Standard. URL:
+          <a href=
+          "https://tools.ietf.org/html/rfc6068">https://tools.ietf.org/html/rfc6068</a>
+        </dd>
+        <dt id="bib-rfc7231">[RFC7231]</dt>
         <dd>
           <a href=
-          "https://www.w3.org/TR/owl2-manchester-syntax/"><cite>OWL
-          2 Web Ontology Language Manchester Syntax (Second
-          Edition)</cite></a>. Matthew Horridge; Peter
-          Patel-Schneider. W3C. 11 December 2012. W3C Note. URL:
-          <a href=
-          "https://www.w3.org/TR/owl2-manchester-syntax/">https://www.w3.org/TR/owl2-manchester-syntax/</a>
+          "https://httpwg.org/specs/rfc7231.html"><cite>Hypertext
+          Transfer Protocol (HTTP/1.1): Semantics and
+          Content</cite></a>. R. Fielding, Ed.; J. Reschke, Ed..
+          IETF. June 2014. Proposed Standard. URL: <a href=
+          "https://httpwg.org/specs/rfc7231.html">https://httpwg.org/specs/rfc7231.html</a>
         </dd>
-        <dt id="bib-owl2-overview">[owl2-overview]</dt>
-        <dd>
-          <a href="https://www.w3.org/TR/owl2-overview/"><cite>OWL
-          2 Web Ontology Language Document Overview (Second
-          Edition)</cite></a>. W3C OWL Working Group. W3C. 11
-          December 2012. W3C Recommendation. URL: <a href=
-          "https://www.w3.org/TR/owl2-overview/">https://www.w3.org/TR/owl2-overview/</a>
-        </dd>
-        <dt id="bib-rdf11-concepts">[rdf11-concepts]</dt>
-        <dd>
-          <a href="https://www.w3.org/TR/rdf11-concepts/"><cite>RDF
-          1.1 Concepts and Abstract Syntax</cite></a>. Richard
-          Cyganiak; David Wood; Markus Lanthaler. W3C. 25 February
-          2014. W3C Recommendation. URL: <a href=
-          "https://www.w3.org/TR/rdf11-concepts/">https://www.w3.org/TR/rdf11-concepts/</a>
-        </dd>
-        <dt id="bib-rdf11-mt">[rdf11-mt]</dt>
-        <dd>
-          <a href="https://www.w3.org/TR/rdf11-mt/"><cite>RDF 1.1
-          Semantics</cite></a>. Patrick Hayes; Peter
-          Patel-Schneider. W3C. 25 February 2014. W3C
-          Recommendation. URL: <a href=
-          "https://www.w3.org/TR/rdf11-mt/">https://www.w3.org/TR/rdf11-mt/</a>
-        </dd>
-        <dt id="bib-rfc3987">[RFC3987]</dt>
-        <dd>
-          <a href=
-          "https://tools.ietf.org/html/rfc3987"><cite>Internationalized
-          Resource Identifiers (IRIs)</cite></a>. M. Duerst; M.
-          Suignard. IETF. January 2005. Proposed Standard. URL:
-          <a href=
-          "https://tools.ietf.org/html/rfc3987">https://tools.ietf.org/html/rfc3987</a>
-        </dd>
-        <dt id="bib-rijgersberg-et-al-2013">
-        [Rijgersberg-et-al-2013]</dt>
+        <dt id="bib-rijgersberg">[RIJGERSBERG]</dt>
         <dd>
           <a href=
           "http://www.semantic-web-journal.net/content/ontology-units-measure-and-related-concepts">
@@ -11684,14 +11691,14 @@
           "http://www.semantic-web-journal.net/content/ontology-units-measure-and-related-concepts">
           http://www.semantic-web-journal.net/content/ontology-units-measure-and-related-concepts</a>
         </dd>
-        <dt id="bib-semver">[SemVer]</dt>
+        <dt id="bib-semver">[SEMVER]</dt>
         <dd>
           <a href="https://semver.org/"><cite>Semantic Versioning
           2.0.0</cite></a>. Tom Preston-Werner. 26 December 2017.
           URL: <a href=
           "https://semver.org/">https://semver.org/</a>
         </dd>
-        <dt id="bib-smartm2m">[smartM2M]</dt>
+        <dt id="bib-smartm2m">[SMARTM2M]</dt>
         <dd>
           <a href=
           "http://www.etsi.org/deliver/etsi_ts/103200_103299/103264/02.01.01_60/ts_103264v020101p.pdf">
@@ -11707,11 +11714,18 @@
           <a href=
           "https://www.w3.org/TR/string-meta/"><cite>Strings on the
           Web: Language and Direction Metadata</cite></a>. Addison
-          Phillips; Richard Ishida. W3C. 16 April 2019. W3C Working
+          Phillips; Richard Ishida. W3C. 11 June 2019. W3C Working
           Draft. URL: <a href=
           "https://www.w3.org/TR/string-meta/">https://www.w3.org/TR/string-meta/</a>
         </dd>
-        <dt id="bib-vocab-ssn">[vocab-ssn]</dt>
+        <dt id="bib-turtle">[TURTLE]</dt>
+        <dd>
+          <a href="https://www.w3.org/TR/turtle/"><cite>RDF 1.1
+          Turtle</cite></a>. Eric Prud'hommeaux; Gavin Carothers.
+          W3C. 25 February 2014. W3C Recommendation. URL: <a href=
+          "https://www.w3.org/TR/turtle/">https://www.w3.org/TR/turtle/</a>
+        </dd>
+        <dt id="bib-vocab-ssn">[VOCAB-SSN]</dt>
         <dd>
           <a href="https://www.w3.org/TR/vocab-ssn/"><cite>Semantic
           Sensor Network Ontology</cite></a>. Armin Haller;
@@ -11720,20 +11734,39 @@
           Recommendation. URL: <a href=
           "https://www.w3.org/TR/vocab-ssn/">https://www.w3.org/TR/vocab-ssn/</a>
         </dd>
-        <dt id="bib-wot-security-considerations">
-        [WOT-SECURITY-CONSIDERATIONS]</dt>
+        <dt id="bib-wot-architecture">[WOT-ARCHITECTURE]</dt>
         <dd>
-          <a href="https://w3c.github.io/wot-security/"><cite>Web
+          <a href=
+          "https://www.w3.org/TR/wot-architecture/"><cite>Web of
+          Things (WoT) Architecture</cite></a>. Matthias Kovatsch;
+          Ryuichi Matsukura; Michael Lagally; Toru Kawaguchi;
+          Kunihiko Toumura; Kazuo Kajimoto. W3C Candidate Recommendation. 6 November 2019. URL:
+          <a href=
+          "https://www.w3.org/TR/wot-architecture/">https://www.w3.org/TR/wot-architecture/</a>
+        </dd>
+        <dt id="bib-wot-binding-templates">
+        [WOT-BINDING-TEMPLATES]</dt>
+        <dd>
+          <a href=
+          "https://www.w3.org/TR/wot-binding-templates/"><cite>Web
+          of Things (WoT) Protocol Binding Templates</cite></a>.
+          Michael Koster. W3C. 5 April 2018. W3C Note. URL:
+          <a href="https://www.w3.org/TR/wot-binding-templates/">https://www.w3.org/TR/wot-binding-templates/</a>
+        </dd>
+        <dt id="bib-wot-security-guidelines">
+        [WOT-SECURITY-GUIDELINES]</dt>
+        <dd>
+          <a href="https://www.w3.org/TR/wot-security/"><cite>Web
           of Things (WoT) Security and Privacy
-          Considerations</cite></a>. ; Michael McCool; Elena
-          Reshetova. W3C. March 2019. URL: <a href=
-          "https://w3c.github.io/wot-security/">https://w3c.github.io/wot-security/</a>
+          Guidelines</cite></a>. Michael McCool; Elena Reshetova.
+          W3C Note. 6 November 2019. URL: <a href=
+          "https://www.w3.org/TR/wot-security/">https://www.w3.org/TR/wot-security/</a>
         </dd>
       </dl>
     </section>
   </section>
-  <p role="navigation" id="back-to-top"><a href="#toc"><abbr title=
-  "Back to Top">↑</abbr></a></p>
+  <p role="navigation" id="back-to-top"><a href=
+  "#toc"><abbr title="Back to Top">↑</abbr></a></p>
   <script src=
   "https://www.w3.org/scripts/TR/2016/fixup.js"></script>
 </body>
