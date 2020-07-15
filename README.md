@@ -42,8 +42,10 @@ W3C勧告文書の日本語翻訳物作成手順の案について以下に示�
 ~~~
 <div class="note" id="issue-container-generatedID">
 <div role="heading" class="ednote-title marker" id="h-ednote" aria-level="5"><span>翻訳者のメモ</span></div>
-<p>上記で言う「発信元」に関して、<a href="#sec-hypermedia-controls">§&nbsp;<bdi class="secno" >6.5</bdi> ハイパーメディア制御</a>で以下の通り触れられていることから、原文における "The hypermedia controls MUST originate from the authority managing the Thing that is providing the corresponding Interaction Affordance." 中の "authority" は「ハイパーメディア制御の発信元」を意味しており、通常、Webサーバです。
-<blockquote>ハイパーメディア制御は通常、ウェブ・サーバーから発信され、ウェブ・クライアントがサーバーと対話を行っている間にイン・バンド(in-band)で発見されます。このようにして、ウェブ・サーバーは、現在の状態や承認などの他の要因を考慮に入れることにより、ウェブ・アプリケーションを通じてクライアントを動的に駆動できます。</blockquote>
+<p>訳者注の記述内容をここに書きます。<br/>
+訳者注の中で、文書中の他の箇所を引用する場合、以下の形式で章番号を参照してください。<a href="#sec-hypermedia-controls">§&nbsp;<bdi class="secno" >章番号.節番号.項番号</bdi> 章タイトル</a>。<br/>
+また、引用内容は、以下のように <blocquote>〜</blockquote> を利用して引用してください。<br/>
+<blockquote>引用内容をここに書きます。</blockquote>
 </p>
 </div>
 ~~~
