@@ -38,6 +38,16 @@ W3C勧告文書の日本語翻訳物作成手順の案について以下に示�
 
 なお，工程2.2および工程2.3における査読作業にあたっては，英語原本中の文章の意味を変えないよう，できるだけ原文に忠実な翻訳となるように努める必要がある．一方，英語原文の意味がわかりづらいく，読者の理解を助けるために補足が必要な場合は，その補足部分について「訳者注釈」として明記する．
 
+※訳者注のHTMLテンプレート
+~~~
+<div class="note" id="issue-container-generatedID">
+<div role="heading" class="ednote-title marker" id="h-ednote" aria-level="5"><span>翻訳者のメモ</span></div>
+<p>上記で言う「発信元」に関して、<a href="#sec-hypermedia-controls">§&nbsp;<bdi class="secno" >6.5</bdi> ハイパーメディア制御</a>で以下の通り触れられていることから、原文における "The hypermedia controls MUST originate from the authority managing the Thing that is providing the corresponding Interaction Affordance." 中の "authority" は「ハイパーメディア制御の発信元」を意味しており、通常、Webサーバです。
+<blockquote>ハイパーメディア制御は通常、ウェブ・サーバーから発信され、ウェブ・クライアントがサーバーと対話を行っている間にイン・バンド(in-band)で発見されます。このようにして、ウェブ・サーバーは、現在の状態や承認などの他の要因を考慮に入れることにより、ウェブ・アプリケーションを通じてクライアントを動的に駆動できます。</blockquote>
+</p>
+</div>
+~~~
+
 ### 工程2.1: 査読者の割当
 
 査読担当者に過度な負担を強いない形で作業を円滑に進めるため，査読作業にあたっては，「日本語原本」を段落ごとに分けた上で特定の担当者に割り当てる．その際，各担当者の持つ知識および興味を考慮した上で割当を行う．
