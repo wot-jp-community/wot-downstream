@@ -68,7 +68,7 @@ W3C勧告文書の日本語翻訳物作成手順の案について以下に示�
 なお，査読作業の結果，修正が必要と思われる場合，査読担当は，GitHubのPullrequestの仕組みを使って修正内容を提案する．なお，修正が必要だが，具体的な修正内容が不明な場合は，GitHubのIssueの仕組みを使い問題点の指摘を行う．
 
 1. まずはGitHubのIssueを作る: https://github.com/wot-jp-community/wot-architecture/issues
-1. 次にGitHubのPullrequestを作る
+1. 可能であれば，次にGitHubのPullrequestを作る
     1. まずHTMLの修正案を作る: https://github.com/wot-jp-community/wot-architecture/blob/master/index.html
     1. 次にPullrequestを作る: https://github.com/wot-jp-community/wot-architecture/pulls
 
