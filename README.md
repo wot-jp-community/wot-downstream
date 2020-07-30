@@ -22,6 +22,8 @@ W3C勧告文書の日本語翻訳物作成手順の案について以下に示�
 
 * 作業担当者: 事務局
 * 工程生産物: W3C仕様書の日本語翻訳物 (日本語原本)
+  * WoT Architecture: [作業用リポジトリ](https://github.com/wot-jp-community/wot-architecture) / [HTML](https://wot-jp-community.github.io/wot-architecture/index.html)
+  * WoT Thing Description: TBD
 
 ### 工程2: 日本語原本の査読
 
@@ -64,6 +66,11 @@ W3C勧告文書の日本語翻訳物作成手順の案について以下に示�
 各査読担当は，割当表にもとづいて，各自が担当する査読単位の査読を行う．
 
 なお，査読作業の結果，修正が必要と思われる場合，査読担当は，GitHubのPullrequestの仕組みを使って修正内容を提案する．なお，修正が必要だが，具体的な修正内容が不明な場合は，GitHubのIssueの仕組みを使い問題点の指摘を行う．
+
+1. まずはGitHubのIssueを作る: https://github.com/wot-jp-community/wot-architecture/issues
+1. 次にGitHubのPullrequestを作る
+    1. まずHTMLの修正案を作る: https://github.com/wot-jp-community/wot-architecture/blob/master/index.html
+    1. 次にPullrequestを作る: https://github.com/wot-jp-community/wot-architecture/pulls
 
 作業担当者: 査読担当
 工程生産物: GitHub上のPullrequest (もしくはIssue)
