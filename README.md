@@ -72,6 +72,8 @@ W3C勧告文書の日本語翻訳物作成手順の案について以下に示�
     1. まずHTMLの修正案を作る: https://github.com/wot-jp-community/wot-architecture/blob/master/index.html
     1. 次にPullrequestを作る: https://github.com/wot-jp-community/wot-architecture/pulls
 
+なお，査読にあたっては[W3C仕様書の日本語翻訳にあたってのガイドライン (案)](https://github.com/wot-jp-community/wot-downstream-private/blob/master/meetings/20200730/rules.md)もご参照のこと．
+
 作業担当者: 査読担当
 工程生産物: GitHub上のPullrequest (もしくはIssue)
 
