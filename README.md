@@ -65,14 +65,19 @@ W3C勧告文書の日本語翻訳物作成手順の案について以下に示�
 
 各査読担当は，割当表にもとづいて，各自が担当する査読単位の査読を行う．
 
-なお，査読作業の結果，修正が必要と思われる場合，査読担当は，GitHubのPullrequestの仕組みを使って修正内容を提案する．なお，修正が必要だが，具体的な修正内容が不明な場合は，GitHubのIssueの仕組みを使い問題点の指摘を行う．
+なお，査読作業の結果，修正が必要と思われる場合，査読担当は，GitHubのPullrequestの仕組みを使って修正内容を提案する．
 
-1. まずはGitHubのIssueを作る: https://github.com/wot-jp-community/wot-architecture/issues
-1. 可能であれば，次にGitHubのPullrequestを作る
-    1. まずHTMLの修正案を作る: https://github.com/wot-jp-community/wot-architecture/blob/master/index.html
-    1. 次にPullrequestを作る: https://github.com/wot-jp-community/wot-architecture/pulls
+**Pullrequest作成の基本的な手順**
+1. まず，査読対象のHTMLにアクセスする: https://github.com/wot-jp-community/wot-architecture/blob/master/index.html
+1. 右上の「鉛筆マーク」のアイコンをクリックして，編集モードに入る
+1. HTMLコードのどこかをクリックした上で，査読担当の章を検索する (例: 5.1.6)
+1. 必要に応じて，査読担当の内容を修正する
+1. ページの一番下にあるラジオボタンのうち「Create a new branch for this commit and start a pull request.」をクリックした上で，「Proose changes」のボタンをクリックする
+1. Pullrequest作成画面に遷移するので，タイトルとして「章番号」および「章タイトル」を含めて記述し，概要をコメント欄に記述した上で，Pullrequestを作成する
 
-なお，査読にあたっては[W3C仕様書の日本語翻訳にあたってのガイドライン (案)](https://github.com/wot-jp-community/wot-downstream-private/blob/master/meetings/20200730/rules.md)もご参照のこと．
+Pullrequest作成にあたっては，[Pullrequest作成のチュートリアル](https://github.com/wot-jp-community/wot-downstream-private/blob/master/meetings/20200827/20200827-PR-tutorial.mp4)も参照のこと．
+
+なお，査読にあたっては[W3C仕様書の日本語翻訳にあたってのガイドライン (案)](https://github.com/wot-jp-community/wot-downstream-private/blob/master/meetings/20200730/rules.md)も参照のこと．
 
 作業担当者: 査読担当
 工程生産物: GitHub上のPullrequest (もしくはIssue)
