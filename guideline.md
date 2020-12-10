@@ -53,7 +53,7 @@
 |configuration|構成|
 |Consumed Thing|利用されるThing|
 |Consuming a Thing|Thingを利用する|
-|Consumer|(「Thing Descriptionを読み込んで処理するServient」という意味の場合は，英語のまま)|
+|Consumer|(「Thing Descriptionを読み込んで処理するServient」という意味の場合は，英語のまま「Consumer」)|
 |consumer|(一般的な英語として「利用する人・モノ」の場合は)消費者|
 |content type (小文字)|コンテントタイプ|
 |cost|損失 (文脈に応じて要検討)|
