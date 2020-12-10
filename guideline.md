@@ -49,6 +49,7 @@
 |Binding Templates|バインディングテンプレート|
 |capability|機能|
 |collaboration|連携|
+|compute-intensive|計算集約型の|
 |configuration|構成|
 |Consumed Thing|利用されるThing|
 |Consuming a Thing|Thingを利用する|
