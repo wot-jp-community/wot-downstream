@@ -75,6 +75,7 @@
 |Hypermedia Control|ハイパーメディアコントロール|
 |Infrastructure|インフラストラクチャ|
 |Insight|洞察|
+|interact|相互作用する|
 |Interaction Affordance|相互作用のアフォーダンス|
 |Interaction Model|相互作用モデル|
 |Intermediary|仲介者|
