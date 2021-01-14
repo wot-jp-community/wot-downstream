@@ -46,6 +46,7 @@
 |assertion|言明 (JIS X007:2001では「表明」とされている．また，「アサーション」とするべき可能性もあるので，最終的に再確認)|
 |authentication/authorization|認証・認可 (文脈によって使い分け検討)|
 |area|領域 (文脈に応じて要検討)|
+|behavior|動作 (文脈によって「振る舞い」や「挙動」となる可能性あり)|
 |Binding Templates|バインディングテンプレート|
 |capability|機能|
 |collaboration|連携|
