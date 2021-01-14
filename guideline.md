@@ -89,6 +89,7 @@
 |Private Security Data|(英語のまま)|
 |Property|(英語のまま)|
 |Protocol Binding|プロトコルバインディング|
+|Protocol Stack|プロトコルスタック|
 |Public Security Metadata|(英語のまま)|
 |risk|リスク|
 |scalability|スケーラビリティ|
