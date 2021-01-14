@@ -78,7 +78,7 @@
 |interact|相互作用する|
 |Interaction Affordance|相互作用のアフォーダンス|
 |Interaction Model|相互作用モデル|
-|Intermediary|仲介者|
+|Intermediary|(英語のまま)|
 |interwork|相互運用|
 |IoT Platform|IoTプラットフォーム|
 |Legacy Device(s)|旧式デバイス|
