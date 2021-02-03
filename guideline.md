@@ -43,6 +43,7 @@
 |:---|:---|
 |Action|(英語のまま)|
 |actuation|動作|
+|actuator|アクチュエーター|
 |assertion|言明 (JIS X007:2001では「表明」とされている．また，「アサーション」とするべき可能性もあるので，最終的に再確認)|
 |authentication/authorization|認証・認可 (文脈によって使い分け検討)|
 |area|領域 (文脈に応じて要検討)|
@@ -98,6 +99,7 @@
 |Security|セキュリティ|
 |Security Configuration|セキュリティ構成情報|
 |Security hazard|セクリティ上の危険性|
+|sensor|センサー|
 |Serialization|シリアライゼーション|
 |Servient|(英語のまま)|
 |Smart Building|スマートビルディング|
