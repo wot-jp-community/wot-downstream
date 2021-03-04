@@ -87,6 +87,7 @@
 |IoT Platform|IoTプラットフォーム|
 |Legacy Device(s)|旧式デバイス|
 |Metadata|メタデータ|
+|mitigation|(リスクの)軽減|
 |Personally Identifiable Information (PII)|個人識別可能情報|
 |Privacy|プライバシー|
 |Private Security Data|(英語のまま)|
