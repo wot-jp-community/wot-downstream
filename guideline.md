@@ -64,6 +64,7 @@
 |damage|損害 (文脈に応じて要検討)|
 |Data Schema|(英語のまま)|
 |Deployment|デプロイメント|
+|designed to|目指している|
 |Digital Twin|デジタルツイン|
 |discovery|発見 (状況に応じて「ディスカバリ」とする可能性あり)|
 |Domain-specific Vocabulary|ドメイン固有の語彙|
