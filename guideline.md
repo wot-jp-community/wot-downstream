@@ -115,6 +115,7 @@
 |Thing or Web Thing|Thing または Web Thing|
 |thing (頭文字が小文字)|モノ|
 |Thing Directory|(英語のまま)|
+|tracking risk|追跡のリスク|
 |Transfer Protocol|転送プロトコル|
 |UX devices|UXデバイス|
 |virtual representation|仮想表現|
