@@ -104,6 +104,7 @@
 |Security and Privacy Consideratons|セキュリティとプライバシーへの配慮 ([SVG仕様書のJIS日本語訳](https://kikakurui.com/x4/X4197-2012-01.html)にもとづいて，「considerations」は「配慮」と訳す)|
 |Security Configuration|セキュリティ構成情報|
 |Security hazard|セクリティ上の危険性|
+|see ...|...を参照のこと|
 |sensor|センサー|
 |Serialization|シリアライゼーション|
 |Servient|(英語のまま)|
