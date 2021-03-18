@@ -74,6 +74,7 @@
 |event|出来事|
 |Exposed Thing|公開された Thing|
 |Exposing a Thing|Thing を公開する|
+|fingerprinting or fingerprintable|フィンガープリンティング もしくは フィンガープリンティング可能な|
 |global および globally|グローバル および グローバルに|
 |Healthcare|医療 (文脈に応じて「ヘルスケア」)|
 |Hypermedia Control|ハイパーメディアコントロール|
