@@ -36,7 +36,7 @@
 |Abstract|概要|
 |Status of This Document|この文書のステータス|
 |W3C Members|W3C会員|
-|document|文書|
+|document|文書@@@|
 |normative|規定|
 |informative|参考情報|
 |Introduction|はじめに|
