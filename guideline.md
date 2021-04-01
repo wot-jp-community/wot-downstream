@@ -37,6 +37,7 @@
 |Status of This Document|この文書のステータス (「document」全般も「文書」とするか; 「TD document」等の用語もあることに注意)@@@|
 |W3C Members|W3C会員|
 |normative|規定|
+|non-normative|非規定|
 |informative|参考情報|
 |Introduction|はじめに|
 |Conformance|適合性|
