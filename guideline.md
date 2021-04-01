@@ -34,9 +34,8 @@
 |英語|日本語|
 |:---|:---|
 |Abstract|概要|
-|Status of This Document|この文書のステータス|
+|Status of This Document|この文書のステータス (「document」全般も「文書」とするか; 「TD document」等の用語もあることに注意)@@@|
 |W3C Members|W3C会員|
-|document|文書@@@|
 |normative|規定|
 |informative|参考情報|
 |Introduction|はじめに|
