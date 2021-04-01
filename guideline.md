@@ -33,6 +33,9 @@
 ### 全般的な用語
 |英語|日本語|
 |:---|:---|
+|Abstract|概要|
+|Status of This Document|この文書のステータス|
+|W3C Members|W3C会員|
 |normative|規定|
 |informative|参考情報|
 |Introduction|はじめに|
