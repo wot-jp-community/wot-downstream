@@ -129,6 +129,7 @@
 |UX devices|UXデバイス|
 |virtual representation|仮想表現|
 |Virtual Thing|ヴァーチャル Thing|
+|W3C Members|W3C会員|
 |W3C Process Document|W3Cプロセスドキュメント|
 |Web|ウェブ|
 |WoT Interface|WoT インターフェース|
