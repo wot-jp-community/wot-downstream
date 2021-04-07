@@ -81,6 +81,7 @@
 |Exposed Thing|公開された Thing|
 |Exposing a Thing|Thing を公開する|
 |fingerprinting or fingerprintable|フィンガープリンティング もしくは フィンガープリンティング可能な|
+|governed by (the W3C Process Document)|準拠している
 |global および globally|グローバル および グローバルに|
 |Healthcare|医療 (文脈に応じて「ヘルスケア」)|
 |Hypermedia Control|ハイパーメディアコントロール|
