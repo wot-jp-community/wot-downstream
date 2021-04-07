@@ -71,6 +71,7 @@
 |designed to|目指している|
 |Digital Twin|デジタルツイン|
 |discovery|発見 (状況に応じて「ディスカバリ」とする可能性あり)|
+|document|文書|
 |Domain-specific Vocabulary|ドメイン固有の語彙|
 |Edge Device|エッジデバイス|
 |Engineering|土木工事 (文脈に応じて要検討)|
