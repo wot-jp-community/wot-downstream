@@ -37,7 +37,7 @@
 |Status of This Document|この文書のステータス (「document」全般も「文書」とする; ただし，「TD document」や「W3C Process Document」等の用語においては「ドキュメント」とする)|
 |W3C Members|W3C会員|
 |normative|規定|
-|non-normative|「This setin is non-normative.」は「この項は参考情報である。」とし，文中の「non-normatve」は「非規定的」とする。|
+|non-normative|「This setin is non-normative.」は「この章は参考情報である。」とし，文中の「non-normatve」は「非規定的」とする。|
 |informative|参考情報|
 |Introduction|はじめに|
 |Conformance|適合性|
