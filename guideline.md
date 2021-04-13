@@ -104,6 +104,7 @@
 |Protocol Binding|プロトコルバインディング|
 |Protocol Stack|プロトコルスタック|
 |Public Security Metadata|(英語のまま)|
+|remote|リモート|
 |risk|リスク|
 |scalability|スケーラビリティ|
 |search|検索|
