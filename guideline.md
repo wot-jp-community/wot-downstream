@@ -66,16 +66,16 @@
 |cost|損失 (文脈に応じて要検討)|
 |critical|重篤 (文脈に応じて要検討，[「クリティカル」，「危機的」等)|
 |damage|損害 (文脈に応じて要検討)|
-|Data Schema|(英語のまま)|
-|Deployment|デプロイメント|
+|data schema|(英語のまま)|
+|deployment|デプロイメント|
 |designed to|目指している|
 |Digital Twin|デジタルツイン|
 |Director|ディレクター (W3CディレクターとしてのTim Berners-Lee)|
 |discovery|発見 (状況に応じて「ディスカバリ」とする可能性あり)|
 |document|文書|
-|Domain-specific Vocabulary|ドメイン固有の語彙|
+|domain-specific vocabulary|ドメイン固有の語彙|
 |Edge Device|エッジデバイス|
-|Engineering|土木工事 (文脈に応じて要検討)|
+|engineering|土木工事 (文脈に応じて要検討)|
 |Event|(英語のまま)|
 |event|出来事|
 |Exposed Thing|公開された Thing|
@@ -83,10 +83,10 @@
 |fingerprinting or fingerprintable|フィンガープリンティング もしくは フィンガープリンティング可能な|
 |governed by (the W3C Process Document)|準拠している
 |global および globally|グローバル および グローバルに|
-|Healthcare|医療 (文脈に応じて「ヘルスケア」)|
-|Hypermedia Control|ハイパーメディアコントロール|
-|Infrastructure|インフラストラクチャ|
-|Insight|洞察|
+|healthcare|医療 (文脈に応じて「ヘルスケア」)|
+|hypermedia control|ハイパーメディアコントロール|
+|infrastructure|インフラストラクチャ|
+|insight|洞察|
 |interact|相互作用する|
 |Interaction Affordance|相互作用のアフォーダンス|
 |Interaction Model|相互作用モデル|
@@ -94,31 +94,31 @@
 |Internet of Things (IoT)|(英語のまま)|
 |interwork|相互運用|
 |IoT Platform|IoTプラットフォーム|
-|Legacy Device(s)|旧式デバイス|
-|Metadata|メタデータ|
+|legacy device(s)|旧式デバイス|
+|metadata|メタデータ|
 |mitigation|(リスクの)軽減|
 |Personally Identifiable Information (PII)|個人識別可能情報|
-|Privacy|プライバシー|
+|privacy|プライバシー|
 |Private Security Data|(英語のまま)|
 |Property|(英語のまま)|
 |Protocol Binding|プロトコルバインディング|
-|Protocol Stack|プロトコルスタック|
+|protocol stack|プロトコルスタック|
 |Public Security Metadata|(英語のまま)|
 |remote|リモート|
 |risk|リスク|
 |scalability|スケーラビリティ|
 |search|検索|
 |section|レベルに合わせて，「章」(第一レベル)，「節」(第二レベル)または「項」第三レベルとする|
-|Security|セキュリティ|
+|security|セキュリティ|
 |Security and Privacy Consideratons|セキュリティとプライバシーへの配慮 ([SVG仕様書のJIS日本語訳](https://kikakurui.com/x4/X4197-2012-01.html)にもとづいて，「considerations」は「配慮」と訳す)|
 |Security Configuration|セキュリティ構成情報|
-|Security hazard|セクリティ上の危険性|
+|security hazard|セクリティ上の危険性|
 |see ...|...を参照のこと (「Please see ...」は「...を参照いただきたい」|
 |sensor|センサー|
-|Serialization|シリアライゼーション|
+|serialization|シリアライゼーション|
 |Servient|(英語のまま)|
-|Smart Building|スマートビルディング|
-|Subprotocol|サブプロトコル|
+|smart building|スマートビルディング|
+|subprotocol|サブプロトコル|
 |subscribe, receive, unsubscribe (subscribing, receiving, unsubscribing)|登録、受信、登録解除|
 |TD|(英語のまま)|
 |TD document|TDドキュメント（訳注：原文にないが、必要な定義のため追加。次版に追加予定。）|
