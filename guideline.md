@@ -69,7 +69,7 @@
 |data schema|(英語のまま)|
 |deployment|デプロイメント|
 |designed to|目指している|
-|Digital Twin|デジタルツイン|
+|Digital Twin (およびdigital twin)|デジタルツイン|
 |Director|ディレクター (W3CディレクターとしてのTim Berners-Lee)|
 |discovery|発見 (状況に応じて「ディスカバリ」とする可能性あり)|
 |document|文書|
@@ -130,7 +130,7 @@
 |Transfer Protocol|転送プロトコル|
 |UX devices|UXデバイス|
 |virtual representation|仮想表現|
-|Virtual Thing|ヴァーチャル Thing|
+|Virtual Thing (およびvirtual thing)|ヴァーチャル Thing|
 |W3C Members|W3C会員|
 |W3C Process Document|W3Cプロセスドキュメント|
 |Web|ウェブ|
