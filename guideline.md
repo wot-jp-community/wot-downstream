@@ -88,6 +88,7 @@
 |infrastructure|インフラストラクチャ|
 |insight|洞察|
 |interact|相互作用する|
+|interaction|相互作用 (下記の通り，「Interaction Affordance」は「相互作用*の*アフォーダンス」となることに注意)|
 |Interaction Affordance|相互作用のアフォーダンス|
 |Interaction Model|相互作用モデル|
 |Intermediary|(英語のまま)|
