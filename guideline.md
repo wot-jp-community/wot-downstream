@@ -84,7 +84,8 @@
 |governed by (the W3C Process Document)|準拠している
 |global および globally|グローバル および グローバルに|
 |healthcare|医療 (文脈に応じて「ヘルスケア」)|
-|hypermedia control|ハイパーメディアコントロール|
+|hypermedia control|ハイパーメディア制御|
+|hyprmedia-driven|ハイパーメディア駆動|
 |infrastructure|インフラストラクチャ|
 |insight|洞察|
 |interact|相互作用する|
