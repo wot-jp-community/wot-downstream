@@ -77,7 +77,7 @@
 |Edge Device|エッジデバイス|
 |engineering|土木工事 (文脈に応じて要検討)|
 |Event|(英語のまま)|
-|event|出来事|
+|event|出来事 (小文字でも，IT用語としての「イベント」である場合あり)|
 |Exposed Thing|公開された Thing|
 |Exposing a Thing|Thing を公開する|
 |fingerprinting or fingerprintable|フィンガープリンティング もしくは フィンガープリンティング可能な|
