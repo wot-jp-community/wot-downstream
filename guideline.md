@@ -132,7 +132,7 @@
 |Transfer Protocol|転送プロトコル|
 |UX devices|UXデバイス|
 |virtual representation|仮想表現|
-|Virtual Thing (およびvirtual thing)|ヴァーチャル Thing|
+|Virtual Thing (およびvirtual thing)|ヴァーチャルThing|
 |W3C Members|W3C会員|
 |W3C Process Document|W3Cプロセスドキュメント|
 |Web|ウェブ|
