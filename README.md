@@ -101,7 +101,7 @@ DSTF会合の中で，各査読担当が作成したPullrequestにもとづい�
 * 工程生産物: 問題点を修正の上，公開向けフォーマットに変換された日本語原本 (公開原本)
 
 例)
-* [Thing Descriptionの公開原本 (PDF)](https://github.com/wot-jp-community/wot-downstream/blob/master/wot-thing-description/Overview.pdf)
+* [Thing Descriptionの公開原本 (PDF)](https://github.com/wot-jp-community/wot-architecture/blob/master/index.pdf)
 * [Thing Descriptionの公開原本 (Word)](https://github.com/wot-jp-community/wot-downstream/blob/master/wot-thing-description/Overview.docx)
 
 #### 工程3.2: 最終確認
