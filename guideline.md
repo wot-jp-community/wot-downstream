@@ -96,7 +96,7 @@
 |Internet of Things (IoT)|(英語のまま)|
 |interwork|相互運用|
 |IoT Platform|IoTプラットフォーム|
-|legacy device(s)|旧式デバイス|
+|legacy device|旧式デバイス|
 |metadata|メタデータ|
 |mitigation|(リスクの)軽減|
 |Personally Identifiable Information (PII)|個人識別可能情報|
