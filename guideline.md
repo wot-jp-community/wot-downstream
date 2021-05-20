@@ -108,6 +108,7 @@
 |Public Security Metadata|(英語のまま)|
 |remote|リモート|
 |risk|リスク|
+|sample|サンプル (exampleが「例」であるのと対比して)|
 |scalability|スケーラビリティ|
 |search|検索|
 |section|レベルに合わせて，「章」(第一レベル)，「節」(第二レベル)または「項」第三レベルとする|
