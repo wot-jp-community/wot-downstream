@@ -125,6 +125,7 @@
 |subscribe, receive, unsubscribe (subscribing, receiving, unsubscribing)|登録、受信、登録解除|
 |TD|(英語のまま)|
 |TD document|TDドキュメント（訳注：原文にないが、必要な定義のため追加。次版に追加予定。）|
+|TD instance (および「Thing Description instance」)|TDインスタンス (および「Thing Descriptionインスタンス) (=「の」でつなぐのでなく)|
 |TD Vocabulary|TD 語彙|
 |Thing or Web Thing|Thing または Web Thing|
 |thing (頭文字が小文字)|モノ|
