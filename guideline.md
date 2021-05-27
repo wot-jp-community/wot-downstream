@@ -66,7 +66,7 @@
 |cost|損失 (文脈に応じて要検討)|
 |critical|重篤 (文脈に応じて要検討，[「クリティカル」，「危機的」等)|
 |damage|損害 (文脈に応じて要検討)|
-|data schema|(英語のまま)|
+|data schema|データスキーマ (Architecture仕様書中の用語定義の箇所では「データスキーマ (Data Schema)」)|
 |deployment|デプロイメント|
 |designed to|目指している|
 |Digital Twin (およびdigital twin)|デジタルツイン|
