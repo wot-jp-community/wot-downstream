@@ -119,7 +119,7 @@
 |security|セキュリティ|
 |Security and Privacy Consideratons|セキュリティとプライバシーへの配慮 ([SVG仕様書のJIS日本語訳](https://kikakurui.com/x4/X4197-2012-01.html)にもとづいて，「considerations」は「配慮」と訳す)|
 |Security Configuration|セキュリティ構成情報|
-|security hazard|セクリティ上の危険性|
+|security hazard|セキュリティ上の危険性|
 |see ...|...を参照のこと (「Please see ...」は「...を参照いただきたい」|
 |sensor|センサー|
 |serialization|シリアライゼーション|
