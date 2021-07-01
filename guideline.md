@@ -110,6 +110,7 @@
 |Protocol Binding|プロトコルバインディング|
 |protocol stack|プロトコルスタック|
 |Public Security Metadata|(英語のまま)|
+|RECOMMENDED|推奨される|
 |remote|リモート|
 |risk|リスク|
 |sample|サンプル (exampleが「例」であるのと対比して)|
