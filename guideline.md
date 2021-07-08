@@ -50,11 +50,13 @@
 |actuation|動作|
 |actuator|アクチュエーター|
 |assertion|言明 (JIS X007:2001では「表明」とされている．また，「アサーション」とするべき可能性もあるので，最終的に再確認)|
+|Assignment Function|割当関数|
 |authentication/authorization|認証・認可 (文脈によって使い分け検討)|
 |area|領域 (文脈に応じて要検討)|
 |behavior|動作 (文脈によって「振る舞い」や「挙動」となる可能性あり)|
 |Binding Templates|バインディングテンプレート|
 |capability|機能|
+|Class|クラス|
 |collaboration|連携|
 |compute-intensive|計算集約型の|
 |configuration|構成|
@@ -88,6 +90,7 @@
 |hyprmedia-driven|ハイパーメディア駆動|
 |infrastructure|インフラストラクチャ|
 |insight|洞察|
+|Instance Relation|インスタンス関係|
 |interact|相互作用する|
 |interaction|相互作用 (下記の通り，「Interaction Affordance」は「相互作用*の*アフォーダンス」となることに注意)|
 |Interaction Affordance|相互作用のアフォーダンス|
@@ -99,6 +102,7 @@
 |legacy device|旧式デバイス|
 |metadata|メタデータ|
 |mitigation|(リスクの)軽減|
+|Object|オブジェクト|
 |Personally Identifiable Information (PII)|個人識別可能情報|
 |privacy|プライバシー|
 |Private Security Data|(英語のまま)|
@@ -106,6 +110,7 @@
 |Protocol Binding|プロトコルバインディング|
 |protocol stack|プロトコルスタック|
 |Public Security Metadata|(英語のまま)|
+|RECOMMENDED|推奨される|
 |remote|リモート|
 |risk|リスク|
 |sample|サンプル (exampleが「例」であるのと対比して)|
@@ -115,11 +120,13 @@
 |security|セキュリティ|
 |Security and Privacy Consideratons|セキュリティとプライバシーへの配慮 ([SVG仕様書のJIS日本語訳](https://kikakurui.com/x4/X4197-2012-01.html)にもとづいて，「considerations」は「配慮」と訳す)|
 |Security Configuration|セキュリティ構成情報|
-|security hazard|セクリティ上の危険性|
+|security hazard|セキュリティ上の危険性|
 |see ...|...を参照のこと (「Please see ...」は「...を参照いただきたい」|
 |sensor|センサー|
 |serialization|シリアライゼーション|
 |Servient|(英語のまま)|
+|Signature|シグネチャ|
+|Simple Type|単純型|
 |smart building|スマートビルディング|
 |subprotocol|サブプロトコル|
 |subscribe, receive, unsubscribe (subscribing, receiving, unsubscribing)|登録、受信、登録解除|
@@ -127,14 +134,17 @@
 |TD document|TDドキュメント（訳注：原文にないが、必要な定義のため追加。次版に追加予定。）|
 |TD instance (および「Thing Description instance」)|TDインスタンス (および「Thing Descriptionインスタンス) (=「の」でつなぐのでなく)|
 |TD Vocabulary|TD 語彙|
+|Term|用語|
 |Thing or Web Thing|Thing または Web Thing|
 |thing (頭文字が小文字)|モノ|
 |Thing Directory|(英語のまま)|
 |tracking risk|追跡のリスク|
 |Transfer Protocol|転送プロトコル|
+|Type Function|型関数|
 |UX devices|UXデバイス|
 |virtual representation|仮想表現|
 |Virtual Thing (およびvirtual thing)|ヴァーチャルThing|
+|Vocabulary Term|語彙用語|
 |W3C Members|W3C会員|
 |W3C Process Document|W3Cプロセスドキュメント|
 |Web|ウェブ|
