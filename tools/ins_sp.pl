@@ -24,6 +24,9 @@ while (<>) {
     s/\]</\] </g;
     s/\](.+?)/\] $1/g;
 
+    ## URL
+    s/<code>(https:.+?)<\/code>/ <code>$1<\/code> /g;
+    s/> <code>(https:.+?)<\/code> </><code>$1<\/code></g;
 
     # exceptions
     s/url=\(0057\) https/url=\(0057\)https/;
