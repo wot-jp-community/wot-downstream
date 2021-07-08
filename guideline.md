@@ -86,6 +86,7 @@
 |governed by (the W3C Process Document)|準拠している
 |global および globally|グローバル および グローバルに|
 |healthcare|医療 (文脈に応じて「ヘルスケア」)|
+|human-readable (or human readable)|人間が読める|
 |hypermedia control|ハイパーメディア制御|
 |hyprmedia-driven|ハイパーメディア駆動|
 |infrastructure|インフラストラクチャ|
@@ -100,6 +101,7 @@
 |interwork|相互運用|
 |IoT Platform|IoTプラットフォーム|
 |legacy device|旧式デバイス|
+|machine-readable (or machine readable)|機会処理可能な|
 |metadata|メタデータ|
 |mitigation|(リスクの)軽減|
 |Object|オブジェクト|
