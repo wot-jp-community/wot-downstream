@@ -58,6 +58,7 @@
 |capability|機能|
 |Class|クラス|
 |collaboration|連携|
+|collection|コレクション|
 |compute-intensive|計算集約型の|
 |configuration|構成|
 |Consumed Thing|利用されるThing|
