@@ -144,6 +144,7 @@
 |tracking risk|追跡のリスク|
 |Transfer Protocol|転送プロトコル|
 |Type Function|型関数|
+|used to ... (特に表の中の説明で)|...のために用いられる|
 |UX devices|UXデバイス|
 |virtual representation|仮想表現|
 |Virtual Thing (およびvirtual thing)|ヴァーチャルThing|
