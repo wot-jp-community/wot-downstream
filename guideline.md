@@ -113,7 +113,7 @@
 |Protocol Binding|プロトコルバインディング|
 |protocol stack|プロトコルスタック|
 |Public Security Metadata|(英語のまま)|
-|RECOMMENDED|推奨される|
+|RECOMMENDED or recommended|推奨される|
 |remote|リモート|
 |risk|リスク|
 |sample|サンプル (exampleが「例」であるのと対比して)|
@@ -124,7 +124,7 @@
 |Security and Privacy Consideratons|セキュリティとプライバシーへの配慮 ([SVG仕様書のJIS日本語訳](https://kikakurui.com/x4/X4197-2012-01.html)にもとづいて，「considerations」は「配慮」と訳す)|
 |Security Configuration|セキュリティ構成情報|
 |security hazard|セキュリティ上の危険性|
-|see ...|...を参照のこと (「Please see ...」は「...を参照いただきたい」|
+|see ...|...を参照のこと (「Please see ...」は「...を参照いただきたい」)|
 |sensor|センサー|
 |serialization|シリアライゼーション|
 |Servient|(英語のまま)|
