@@ -65,7 +65,7 @@
 |Consuming a Thing|Thingを利用する|
 |Consumer|(「Thing Descriptionを読み込んで処理するServient」という意味の場合は，英語のまま「Consumer」)|
 |consumer|(一般的な英語として「利用する人・モノ」の場合は)消費者|
-|content type (小文字)|コンテントタイプ|
+|content type (小文字)|コンテンツタイプ|
 |cost|損失 (文脈に応じて要検討)|
 |critical|重篤 (文脈に応じて要検討，[「クリティカル」，「危機的」等)|
 |damage|損害 (文脈に応じて要検討)|
