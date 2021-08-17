@@ -55,6 +55,7 @@
 |area|領域 (文脈に応じて要検討)|
 |behavior|動作 (文脈によって「振る舞い」や「挙動」となる可能性あり)|
 |Binding Templates|バインディングテンプレート|
+|boolean|ブーリアン|
 |capability|機能|
 |Class|クラス|
 |collaboration|連携|
