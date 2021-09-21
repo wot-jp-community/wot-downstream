@@ -14,9 +14,8 @@ while (<>) {
     ## palens
     s/>\(/> \(/g;
     s/(.+?)\(/$1 \(/g;
-    s/\)</\) </g;
     s/\)\)/\)\) /g;
-    s/\)(.+?)/\) $1/g;
+    s/\)(?!<)/\) /g;
 
     ## brackets
     s/>\[/> \[/g;
@@ -44,6 +43,11 @@ while (<>) {
     s|\) 、|\)、|g;
     s|、 \(|、(|g;
     s|\) 。|\)。|g;
+
+    s/([(]D[)])\s+(TLS)/$1$2/g; # "(D)TLS"
+    s/(HTTP|CoAP)\s+([(]S[)])/$1$2/g; # "HTTP(S)", "CoAP(S)"
+    s/(Essential Claim)\s+([(]s[)])/$1$2/g; # "Essential Claim(s)"
+    s/\s*([(]再[)])\s+(定義)/$1$2/g; # "(再)定義"
 
     # multiple spaces to be shrinked
     s/(\S+)\s+/$1 /g;
